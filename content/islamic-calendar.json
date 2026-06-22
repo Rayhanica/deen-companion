@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ramadan-start",
+    "name": "Ramadan begins",
+    "hijriMonth": "Ramadan",
+    "hijriDay": 1,
+    "type": "fasting",
+    "note": "Confirm moon sighting with your local community."
+  },
+  {
+    "id": "laylat-qadr",
+    "name": "Last ten nights",
+    "hijriMonth": "Ramadan",
+    "hijriDay": 21,
+    "type": "worship",
+    "note": "Increase Quran, dua, charity, and night prayer."
+  },
+  {
+    "id": "eid-fitr",
+    "name": "Eid al-Fitr",
+    "hijriMonth": "Shawwal",
+    "hijriDay": 1,
+    "type": "eid",
+    "note": "Confirm date locally."
+  },
+  {
+    "id": "arafah",
+    "name": "Day of Arafah",
+    "hijriMonth": "Dhu al-Hijjah",
+    "hijriDay": 9,
+    "type": "fasting",
+    "note": "Recommended fasting for non-pilgrims."
+  },
+  {
+    "id": "eid-adha",
+    "name": "Eid al-Adha",
+    "hijriMonth": "Dhu al-Hijjah",
+    "hijriDay": 10,
+    "type": "eid",
+    "note": "Confirm date locally."
+  },
+  {
+    "id": "ashura",
+    "name": "Ashura",
+    "hijriMonth": "Muharram",
+    "hijriDay": 10,
+    "type": "fasting",
+    "note": "Recommended fasting with the 9th or 11th."
+  }
+]

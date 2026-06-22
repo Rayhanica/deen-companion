@@ -1,0 +1,20 @@
+[2026-06-22T05:21:04.498Z] [debug] Notifying parent we're ready
+[2026-06-22T05:21:04.501Z] [debug] Received message from parent: {
+  cacheFile: '/Users/rayhanusmanu/Documents/Islamic website building/.vercel-home/.cache/com.vercel.cli/package-updates/vercel-latest.json',
+  distTag: 'latest',
+  name: 'vercel',
+  updateCheckInterval: 86400000
+}
+[2026-06-22T05:21:04.501Z] [debug] Disconnecting from parent
+[2026-06-22T05:21:04.501Z] [debug] Checking lock file: /Users/rayhanusmanu/Documents/Islamic website building/.vercel-home/.cache/com.vercel.cli/package-updates/vercel-latest.lock
+[2026-06-22T05:21:04.502Z] [debug] Initializing lock file with pid 82737
+[2026-06-22T05:21:04.502Z] [debug] Fetching https://registry.npmjs.org/-/package/vercel/dist-tags
+[2026-06-22T05:21:04.527Z] [error] Failed to get package info: Error: getaddrinfo ENOTFOUND registry.npmjs.org
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:120:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'registry.npmjs.org'
+}
+[2026-06-22T05:21:04.528Z] [debug] Releasing lock file: /Users/rayhanusmanu/Documents/Islamic website building/.vercel-home/.cache/com.vercel.cli/package-updates/vercel-latest.lock
+[2026-06-22T05:21:04.528Z] [debug] Worker finished successfully!

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "adam",
+    "category": "Stories of the Prophets",
+    "title": "Adam عليه السلام and repentance",
+    "period": "Beginning of humanity",
+    "summary": "The story of Adam teaches human honor, the danger of arrogance, the reality of mistakes, and the door of repentance.",
+    "lessons": ["Allah honored Adam with knowledge.", "Iblis fell through arrogance.", "Repentance is part of returning to Allah."],
+    "references": ["Quran 2:30-39", "Quran 7:11-27"]
+  },
+  {
+    "id": "nuh",
+    "category": "Stories of the Prophets",
+    "title": "Nuh عليه السلام and long patience",
+    "period": "Early Prophets",
+    "summary": "Nuh called his people for many years with public and private da'wah. His story teaches persistence and trust when results are not immediate.",
+    "lessons": ["Da'wah needs patience.", "Guidance belongs to Allah.", "Family ties do not replace faith."],
+    "references": ["Quran 71:1-28", "Quran 11:25-49"]
+  },
+  {
+    "id": "ibrahim",
+    "category": "Stories of the Prophets",
+    "title": "Ibrahim عليه السلام and tawhid",
+    "period": "Patriarchal Prophets",
+    "summary": "Ibrahim stood for worshiping Allah alone, challenged idol worship, showed hospitality, and became a model of submission.",
+    "lessons": ["Tawhid requires courage.", "Hospitality is prophetic character.", "Submission means trusting Allah's command."],
+    "references": ["Quran 21:51-73", "Quran 37:83-113"]
+  },
+  {
+    "id": "musa",
+    "category": "Stories of the Prophets",
+    "title": "Musa عليه السلام and liberation",
+    "period": "Children of Israel",
+    "summary": "Musa's story teaches courage against tyranny, reliance on Allah, patience with community, and the seriousness of revelation.",
+    "lessons": ["Speak truth with wisdom.", "Allah opens a way from impossible situations.", "Blessings require gratitude."],
+    "references": ["Quran 20:9-98", "Quran 28:3-46"]
+  },
+  {
+    "id": "seerah-hijrah",
+    "category": "Seerah",
+    "title": "The Hijrah",
+    "period": "622 CE",
+    "summary": "The migration to Madinah was a turning point from persecution to community building. It combined trust in Allah with careful planning.",
+    "lessons": ["Spiritual trust does not cancel practical planning.", "Righteous companionship matters.", "Community requires sacrifice."],
+    "references": ["Quran 9:40", "Quran 59:8-9"]
+  },
+  {
+    "id": "madinah-charter",
+    "category": "Islamic History",
+    "title": "Building community in Madinah",
+    "period": "Early Madinan period",
+    "summary": "The Prophet ﷺ built brotherhood, worship, social responsibility, and public order in Madinah.",
+    "lessons": ["Masjids are centers of worship and community.", "Brotherhood requires action.", "Justice and mercy guide public life."],
+    "references": ["Quran 33:21", "Seerah summaries"]
+  }
+]

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  background: #f8faf7;
+}
+
+.dark {
+  color-scheme: dark;
+  background: #101820;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(217, 237, 242, 0.55) 0%, rgba(248, 250, 247, 0.88) 36%, #f8faf7 100%);
+  color: #1f2933;
+}
+
+.dark body {
+  background:
+    linear-gradient(180deg, rgba(15, 118, 110, 0.2) 0%, rgba(16, 24, 32, 0.96) 34%, #101820 100%);
+  color: #f3f6f2;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.arabic-text {
+  direction: rtl;
+  line-height: 2.2;
+  font-family: "Amiri", "Scheherazade New", "Times New Roman", serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

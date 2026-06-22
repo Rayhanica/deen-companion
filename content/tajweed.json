@@ -1,0 +1,50 @@
+[
+  {
+    "id": "intent-and-adab",
+    "title": "Adab of Quran recitation",
+    "level": "Beginner",
+    "summary": "Begin with sincerity, cleanliness, humility, and a steady pace. Tajweed is a means to honor Allah's words.",
+    "practice": "Read one short surah slowly and avoid rushing the endings.",
+    "reference": "Quran 73:4"
+  },
+  {
+    "id": "makharij",
+    "title": "Articulation points",
+    "level": "Beginner",
+    "summary": "Makharij are where letters exit from the mouth and throat. Learning them helps prevent major pronunciation mistakes.",
+    "practice": "Practice throat letters: ء ه ع ح غ خ.",
+    "reference": "Traditional tajweed manuals"
+  },
+  {
+    "id": "qalqalah",
+    "title": "Qalqalah",
+    "level": "Beginner",
+    "summary": "Qalqalah is a slight echo on ق ط ب ج د when they carry sukun or occur at a stop.",
+    "practice": "Repeat: قُلْ، أَحَدٌ, وَتَبَّ.",
+    "reference": "Traditional tajweed manuals"
+  },
+  {
+    "id": "ghunnah",
+    "title": "Ghunnah",
+    "level": "Beginner",
+    "summary": "Ghunnah is a nasal sound commonly held for two counts on noon and meem with shaddah.",
+    "practice": "Hold the nasal sound in إِنَّ and ثُمَّ.",
+    "reference": "Traditional tajweed manuals"
+  },
+  {
+    "id": "madd",
+    "title": "Madd basics",
+    "level": "Beginner",
+    "summary": "Madd means lengthening. Basic madd is usually held for two counts when a madd letter appears.",
+    "practice": "Count gently while reading قَالَ and يَقُولُ.",
+    "reference": "Traditional tajweed manuals"
+  },
+  {
+    "id": "noon-sakinah",
+    "title": "Noon sakinah and tanween",
+    "level": "Intermediate",
+    "summary": "Noon sakinah and tanween rules include clear pronunciation, merging, changing, and hiding depending on the next letter.",
+    "practice": "Mark examples in Juz Amma and listen to a qualified reciter.",
+    "reference": "Traditional tajweed manuals"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "intentions",
+    "collection": "Sahih al-Bukhari",
+    "number": "1",
+    "category": "faith",
+    "title": "Actions are by intentions",
+    "text": "Actions are judged by intentions, and every person will have what they intended.",
+    "reference": "Bukhari 1; Muslim 1907"
+  },
+  {
+    "id": "pillars-islam",
+    "collection": "Sahih al-Bukhari",
+    "number": "8",
+    "category": "salah",
+    "title": "The pillars of Islam",
+    "text": "Islam is built upon five: testimony of faith, establishing prayer, giving zakah, hajj, and fasting Ramadan.",
+    "reference": "Bukhari 8; Muslim 16"
+  },
+  {
+    "id": "good-character",
+    "collection": "Jami at-Tirmidhi",
+    "number": "1162",
+    "category": "character",
+    "title": "Best in character",
+    "text": "The best of you are those who are best to their families.",
+    "reference": "Tirmidhi 3895"
+  },
+  {
+    "id": "charity-smile",
+    "collection": "Jami at-Tirmidhi",
+    "number": "1956",
+    "category": "charity",
+    "title": "Smiling is charity",
+    "text": "Your smile for your brother is charity.",
+    "reference": "Tirmidhi 1956"
+  },
+  {
+    "id": "repentance",
+    "collection": "Sahih Muslim",
+    "number": "2749",
+    "category": "repentance",
+    "title": "Allah accepts repentance",
+    "text": "Allah accepts the repentance of His servant so long as the soul has not reached the throat.",
+    "reference": "Tirmidhi 3537"
+  },
+  {
+    "id": "parents",
+    "collection": "Sahih al-Bukhari",
+    "number": "5971",
+    "category": "family",
+    "title": "Kindness to parents",
+    "text": "A man asked which deed is best. The Prophet ﷺ mentioned prayer on time, then kindness to parents.",
+    "reference": "Bukhari 527; Muslim 85"
+  },
+  {
+    "id": "death-reminder",
+    "collection": "Jami at-Tirmidhi",
+    "number": "2307",
+    "category": "death",
+    "title": "Remember the Hereafter",
+    "text": "Remember often the destroyer of pleasures.",
+    "reference": "Tirmidhi 2307; Ibn Majah 4258"
+  },
+  {
+    "id": "marriage",
+    "collection": "Sunan Ibn Majah",
+    "number": "1846",
+    "category": "marriage",
+    "title": "Marriage and faith",
+    "text": "Marriage is part of the way of the Prophet ﷺ and a means of guarding faith and character.",
+    "reference": "Ibn Majah 1846; meaning summarized"
+  }
+]

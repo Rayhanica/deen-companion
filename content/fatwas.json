@@ -1,0 +1,34 @@
+[
+  {
+    "id": "fatwa-prayer-missed",
+    "topic": "Salah",
+    "question": "What should I do if I missed a prayer?",
+    "answer": "Pray the missed prayer as soon as you remember or are able. If this is a recurring issue, fix the cause: alarms, sleep routine, work planning, and accountability. Specific cases can differ, so ask a qualified scholar if there are details such as long-term neglect or uncertainty about the number missed.",
+    "references": ["Bukhari and Muslim: pray when one remembers", "Quran 4:103"],
+    "disclaimer": "General learning only. Ask a qualified scholar for a specific ruling."
+  },
+  {
+    "id": "fatwa-wudu-doubt",
+    "topic": "Purification",
+    "question": "Do doubts break wudu?",
+    "answer": "Certainty is not removed by doubt. If you are sure you had wudu and only doubt whether it broke, continue unless you become certain. If you are sure it broke and doubt whether you renewed it, make wudu.",
+    "references": ["Bukhari and Muslim narrations on certainty in prayer", "Legal maxim: certainty is not removed by doubt"],
+    "disclaimer": "General learning only. Ask a qualified scholar for a specific ruling."
+  },
+  {
+    "id": "fatwa-halal-food",
+    "topic": "Halal food",
+    "question": "How do I check if a restaurant is halal?",
+    "answer": "Look for clear halal certification, ask about meat sourcing, cross-contamination, alcohol use in food, and whether staff understand halal requirements. Restaurant listings are only a starting point; verify directly when it matters.",
+    "references": ["Quran 2:168", "Quran 5:3"],
+    "disclaimer": "General learning only. Ask a qualified scholar for a specific ruling."
+  },
+  {
+    "id": "fatwa-zakah-savings",
+    "topic": "Zakah",
+    "question": "Do I owe zakah on savings?",
+    "answer": "Zakah on cash savings usually applies when a Muslim owns zakatable wealth above the nisab for one lunar year. Exact calculations depend on assets, debts, business inventory, gold, and local valuation.",
+    "references": ["Quran 9:60", "Classical zakah chapters"],
+    "disclaimer": "General learning only. Ask a qualified scholar or zakah specialist for calculation."
+  }
+]

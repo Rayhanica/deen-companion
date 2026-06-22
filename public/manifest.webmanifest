@@ -1,0 +1,16 @@
+{
+  "name": "Deen Companion",
+  "short_name": "Deen",
+  "description": "Quran, prayer, hadith, duas, knowledge, and daily worship tracking.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8faf7",
+  "theme_color": "#2f5d50",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

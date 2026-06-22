@@ -1,0 +1,142 @@
+[
+  {
+    "id": "aqeedah-basics",
+    "topic": "Aqeedah basics",
+    "level": "Beginner",
+    "title": "What Muslims believe",
+    "summary": "A Muslim believes in Allah alone, His angels, His books, His messengers, the Last Day, and divine decree. This belief shapes worship, character, patience, and hope.",
+    "steps": ["Learn the six articles of faith.", "Protect tawhid by worshiping Allah alone.", "Ask Allah for certainty and sincerity."],
+    "references": ["Quran 2:285", "Hadith Jibril in Sahih Muslim"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "salah",
+    "topic": "Salah",
+    "level": "Beginner",
+    "title": "How to approach the five daily prayers",
+    "summary": "Salah is the daily meeting with Allah. Start by praying on time, learning purification, facing the qibla, and improving recitation gradually.",
+    "steps": ["Know the prayer times.", "Make wudu.", "Pray with humility and keep learning."],
+    "references": ["Quran 4:103", "Bukhari 8"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "wudu",
+    "topic": "Wudu",
+    "level": "Beginner",
+    "title": "Wudu basics",
+    "summary": "Wudu prepares the body and heart for prayer. Wash the required limbs carefully and avoid wastefulness.",
+    "steps": ["Intend purification.", "Wash the face, arms, wipe head, and wash feet.", "Repeat calmly and consistently."],
+    "references": ["Quran 5:6", "Bukhari and Muslim narrations on wudu"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "fasting",
+    "topic": "Fasting",
+    "level": "Beginner",
+    "title": "Fasting with purpose",
+    "summary": "Fasting Ramadan trains taqwa. It includes avoiding food, drink, and marital relations from dawn to sunset, while guarding the tongue and heart.",
+    "steps": ["Make intention before fasting.", "Eat suhoor when possible.", "Break fast promptly at Maghrib."],
+    "references": ["Quran 2:183", "Bukhari and Muslim on suhoor"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "zakah",
+    "topic": "Zakah",
+    "level": "Beginner",
+    "title": "Zakah basics",
+    "summary": "Zakah purifies wealth and supports eligible recipients. It has rules around thresholds, timing, and asset types.",
+    "steps": ["Track savings and zakatable assets.", "Check the nisab and one lunar year.", "Ask a scholar or trusted calculator for specifics."],
+    "references": ["Quran 9:60", "Bukhari 8"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "hajj-umrah",
+    "topic": "Hajj/Umrah",
+    "level": "Beginner",
+    "title": "Preparing for pilgrimage",
+    "summary": "Hajj is an obligation for those able to perform it. Umrah is a blessed visit to the Sacred House with ihram, tawaf, sa'i, and shaving or trimming.",
+    "steps": ["Learn the rites before traveling.", "Prepare documents and health needs early.", "Keep patience and good character."],
+    "references": ["Quran 3:97", "Bukhari and Muslim on Hajj rites"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "marriage",
+    "topic": "Marriage",
+    "level": "Beginner",
+    "title": "Marriage as worship",
+    "summary": "Marriage is built on mercy, responsibility, honesty, and good character. Islam protects rights and encourages kindness between spouses.",
+    "steps": ["Prioritize deen and character.", "Discuss expectations clearly.", "Seek counsel for conflict."],
+    "references": ["Quran 30:21", "Tirmidhi 3895"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "parents-family",
+    "topic": "Parents/family",
+    "level": "Beginner",
+    "title": "Family ties",
+    "summary": "Islam gives great weight to kindness to parents and maintaining family ties, while still requiring wisdom and justice.",
+    "steps": ["Speak gently.", "Serve where you can.", "Set boundaries without cruelty when needed."],
+    "references": ["Quran 17:23", "Bukhari 527"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "character-adab",
+    "topic": "Character/adab",
+    "level": "All levels",
+    "title": "Good character",
+    "summary": "Good character is worship in daily life: truthfulness, patience, modesty, mercy, and reliability.",
+    "steps": ["Control the tongue.", "Keep promises.", "Apologize quickly and repair harm."],
+    "references": ["Quran 68:4", "Tirmidhi narrations on character"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "halal-haram-basics",
+    "topic": "Halal/haram basics",
+    "level": "Beginner",
+    "title": "Navigating halal and haram",
+    "summary": "Halal and haram questions need knowledge, context, and humility. Clear matters should be followed, and doubtful matters should be treated carefully.",
+    "steps": ["Learn fundamentals first.", "Avoid rushing to verdicts.", "Ask qualified people for specific cases."],
+    "references": ["Quran 16:116", "Bukhari and Muslim on doubtful matters"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "repentance",
+    "topic": "Repentance",
+    "level": "All levels",
+    "title": "Returning to Allah",
+    "summary": "Repentance means leaving the sin, regretting it, resolving not to return, and restoring rights when others were harmed. Allah loves those who repent.",
+    "steps": ["Stop the sin.", "Ask forgiveness sincerely.", "Replace the habit with good deeds."],
+    "references": ["Quran 39:53", "Quran 66:8"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "death-afterlife",
+    "topic": "Death/afterlife",
+    "level": "All levels",
+    "title": "Remembering the Hereafter",
+    "summary": "Remembering death softens the heart, gives priorities, and reminds us to prepare with faith, repentance, and good deeds.",
+    "steps": ["Make dua for a good ending.", "Write debts and trusts clearly.", "Do good before delays become regrets."],
+    "references": ["Quran 3:185", "Tirmidhi 2307"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "prophets-stories",
+    "topic": "Stories of the Prophets",
+    "level": "Beginner",
+    "title": "Learning from the Prophets",
+    "summary": "The stories of the Prophets teach tawhid, patience, da'wah, trust in Allah, and courage during hardship.",
+    "steps": ["Read Quranic stories slowly.", "Look for the lesson, not just the event.", "Connect the lesson to daily choices."],
+    "references": ["Quran 12:111", "Quran 21"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  },
+  {
+    "id": "seerah",
+    "topic": "Seerah of Prophet Muhammad ﷺ",
+    "level": "Beginner",
+    "title": "Beginning the Seerah",
+    "summary": "The Seerah shows how the Prophet ﷺ lived revelation: mercy, courage, patience, worship, leadership, and care for people.",
+    "steps": ["Start with Makkah and Madinah overview.", "Notice character and worship.", "Send salawat daily."],
+    "references": ["Quran 33:21", "Quran 21:107"],
+    "disclaimer": "For personal learning. Ask a qualified scholar for specific rulings."
+  }
+]

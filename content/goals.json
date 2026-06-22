@@ -1,0 +1,10 @@
+[
+  { "id": "five-salah", "title": "Prayed 5 salah", "category": "salah", "defaultTarget": 1 },
+  { "id": "read-quran", "title": "Read Quran", "category": "quran", "defaultTarget": 10 },
+  { "id": "morning-adhkar", "title": "Morning adhkar", "category": "dhikr", "defaultTarget": 1 },
+  { "id": "evening-adhkar", "title": "Evening adhkar", "category": "dhikr", "defaultTarget": 1 },
+  { "id": "charity", "title": "Charity", "category": "charity", "defaultTarget": 1 },
+  { "id": "istighfar", "title": "Istighfar", "category": "dhikr", "defaultTarget": 100 },
+  { "id": "salawat", "title": "Salawat", "category": "dhikr", "defaultTarget": 100 },
+  { "id": "knowledge", "title": "Learn one thing", "category": "knowledge", "defaultTarget": 1 }
+]

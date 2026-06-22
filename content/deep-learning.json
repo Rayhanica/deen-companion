@@ -1,0 +1,173 @@
+[
+  {
+    "id": "arabic-foundations-letters",
+    "track": "Arabic and Quran Reading",
+    "level": "Beginner",
+    "title": "Arabic letters and sound map",
+    "summary": "Learn each Arabic letter by its sound, shape, and mouth position. Quran reading becomes easier when the learner connects letters to sound instead of memorizing English spellings.",
+    "objectives": [
+      "Recognize isolated, beginning, middle, and ending letter forms.",
+      "Distinguish similar letters such as ب ت ث and ج ح خ.",
+      "Practice throat letters slowly with a teacher or trusted recitation."
+    ],
+    "reading": [
+      "Arabic is written right to left. Letters change shape depending on where they appear in a word, but the core sound remains the same.",
+      "Beginners should avoid rushing into long passages. A steady ten-minute daily routine with correct sounds is better than long sessions with repeated mistakes.",
+      "Use Quran recitation as a listening model, but do not rely on audio alone. Pronunciation should be checked by someone qualified when possible."
+    ],
+    "practice": "Read the letters ا ب ت ث ج ح خ د ذ ر ز slowly, then identify them inside Surah al-Fatihah.",
+    "references": ["Quran 73:4", "Traditional Quran literacy manuals"]
+  },
+  {
+    "id": "arabic-vowels-and-sukoon",
+    "track": "Arabic and Quran Reading",
+    "level": "Beginner",
+    "title": "Fathah, kasrah, dammah, and sukoon",
+    "summary": "Short vowels unlock basic reading. Fathah sounds like a short 'a', kasrah like a short 'i', and dammah like a short 'u'. Sukoon means the consonant is read without a following vowel.",
+    "objectives": [
+      "Read one-letter syllables with each short vowel.",
+      "Blend two and three-letter words without pausing between every letter.",
+      "Understand that sukoon closes a syllable."
+    ],
+    "reading": [
+      "Many beginners read Arabic by naming letters instead of sounding them. The goal is to blend sounds: بَ is 'ba', بِ is 'bi', بُ is 'bu'.",
+      "Sukoon should not create an extra vowel. In أَنْعَمْتَ, the نْ closes into the next sound.",
+      "Practice from short Quranic words before moving to full ayahs."
+    ],
+    "practice": "Read: بَ بِ بُ، مَ مِ مُ، قُلْ، لَمْ، أَنْ.",
+    "references": ["Quran 96:1", "Traditional Quran literacy manuals"]
+  },
+  {
+    "id": "tajweed-makharij-deep",
+    "track": "Tajweed Rules",
+    "level": "Beginner",
+    "title": "Makharij: where letters come from",
+    "summary": "Makharij are articulation points. Learning them protects the meaning of Allah's words and builds a cleaner recitation.",
+    "objectives": [
+      "Know the five broad articulation regions: throat, tongue, lips, nasal passage, and empty space of the mouth.",
+      "Identify common beginner mistakes with ع/ء, ح/ه, and ق/ك.",
+      "Practice one group at a time."
+    ],
+    "reading": [
+      "The throat letters are ء ه ع ح غ خ. They require careful practice because English speakers often flatten them.",
+      "The tongue produces many letters. Small changes in tongue position can change the letter entirely, such as س ص ث.",
+      "The lips produce ب م و and help shape other sounds. Ghunnah uses the nasal passage."
+    ],
+    "practice": "Repeat أَ، هَ، عَ، حَ، غَ، خَ and compare with a trusted reciter.",
+    "references": ["Quran 73:4", "Classical tajweed primers"]
+  },
+  {
+    "id": "tajweed-noon-meem",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "Noon sakinah, tanween, and meem sakinah",
+    "summary": "These rules explain how نْ, tanween, and مْ behave before different letters: clear pronunciation, merging, changing, hiding, and nasalization.",
+    "objectives": [
+      "Learn idhar, idgham, iqlab, and ikhfa for noon sakinah and tanween.",
+      "Learn idhar shafawi, idgham shafawi, and ikhfa shafawi for meem sakinah.",
+      "Mark examples in Juz Amma."
+    ],
+    "reading": [
+      "Idhar means clarity. Idgham means merging. Iqlab changes noon/tanween into a meem sound before ب. Ikhfa hides the noon sound with ghunnah.",
+      "For meem sakinah, ikhfa shafawi happens before ب, idgham shafawi before م, and idhar shafawi before other letters.",
+      "These rules are easier when learned from examples instead of memorized as abstract lists."
+    ],
+    "practice": "Find examples of مِنْ شَرِّ, سَمِيعٌ عَلِيمٌ, and تَرْمِيهِمْ بِحِجَارَةٍ.",
+    "references": ["Classical tajweed primers", "Juz Amma examples"]
+  },
+  {
+    "id": "tajweed-madd-waqf",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "Madd and stopping signs",
+    "summary": "Madd controls lengthening, and waqf controls where to stop. Together they improve flow, meaning, and confidence.",
+    "objectives": [
+      "Hold natural madd for two counts.",
+      "Recognize common stop signs such as م, لا, ج, and صلى.",
+      "Avoid stopping where the meaning becomes incomplete."
+    ],
+    "reading": [
+      "Natural madd occurs with ا و ي when the preceding vowel matches the madd letter. It is normally held for two counts.",
+      "Stopping is not only about breath. It protects meaning. A poor stop may make a sentence confusing.",
+      "Beginners should listen to a teacher or reliable reciter and imitate safe stops before studying every waqf symbol in detail."
+    ],
+    "practice": "Read Surah al-Ikhlas and mark where you naturally stop. Then compare with printed stop signs.",
+    "references": ["Quran 73:4", "Mushaf stopping signs"]
+  },
+  {
+    "id": "fatwa-literacy",
+    "track": "Fatwa and Rulings",
+    "level": "Beginner",
+    "title": "How to read fatwas responsibly",
+    "summary": "A fatwa is a scholarly answer to a specific question. It may depend on context, madhab, local custom, necessity, and the questioner's circumstances.",
+    "objectives": [
+      "Know the difference between general learning and personal rulings.",
+      "Check the question, evidence, scholar/source, date, and context.",
+      "Ask qualified scholars for personal cases."
+    ],
+    "reading": [
+      "Fatwas are not all interchangeable. A ruling for one situation may not apply to another situation with different facts.",
+      "Beginners should avoid collecting opinions to find the easiest answer. Learn fundamentals and ask trustworthy qualified people.",
+      "When a matter affects marriage, divorce, finance, inheritance, medical treatment, or legal obligations, ask a qualified scholar directly."
+    ],
+    "practice": "Take one common question and write down: what is the exact scenario, what evidence is cited, and what assumptions are being made?",
+    "references": ["Quran 16:43", "Quran 4:59", "Hadith on halal, haram, and doubtful matters"]
+  },
+  {
+    "id": "hadith-literacy",
+    "track": "Hadith Studies",
+    "level": "Beginner",
+    "title": "How Muslims preserve Hadith",
+    "summary": "Hadith study examines both the chain of narrators and the text. This protects the Sunnah and helps Muslims distinguish strong reports from weak or fabricated ones.",
+    "objectives": [
+      "Understand isnad and matn.",
+      "Know basic grading terms: sahih, hasan, da'if.",
+      "Use hadith with humility and source awareness."
+    ],
+    "reading": [
+      "Isnad means the chain of narrators. Matn means the wording being transmitted. Scholars studied narrator reliability, memory, meeting possibility, hidden defects, and contradictions.",
+      "A beginner does not need to become a hadith critic before benefiting from hadith. Start with reliable collections and trusted explanations.",
+      "Legal rulings often require combining many evidences, not using one translated narration in isolation."
+    ],
+    "practice": "Open a hadith collection and identify the collection name, book/chapter, hadith number, and topic.",
+    "references": ["Sahih al-Bukhari introduction", "Sahih Muslim introduction", "Hadith Jibril"]
+  },
+  {
+    "id": "seerah-makkah-to-madinah",
+    "track": "Islamic History and Seerah",
+    "level": "Beginner",
+    "title": "From Makkah to Madinah",
+    "summary": "The Makkan period built tawhid, patience, courage, and trust. The Madinan period built community, worship, law, and public mercy.",
+    "objectives": [
+      "See how revelation changed hearts before institutions.",
+      "Understand hijrah as sacrifice and trust in Allah.",
+      "Connect seerah lessons to daily character."
+    ],
+    "reading": [
+      "In Makkah, the Prophet ﷺ called to worship Allah alone, warned against injustice, and taught accountability in the Hereafter.",
+      "The hijrah was not escape from responsibility; it was obedience and strategic patience.",
+      "In Madinah, the Muslim community learned brotherhood, prayer in congregation, charity, social contracts, and mercy in public life."
+    ],
+    "practice": "Write three character lessons from the hijrah: trust, planning, and companionship.",
+    "references": ["Quran 9:40", "Quran 33:21", "Seerah works of Ibn Ishaq/Ibn Hisham summarized"]
+  },
+  {
+    "id": "prophet-yusuf-story",
+    "track": "Stories of the Prophets",
+    "level": "Beginner",
+    "title": "Prophet Yusuf: patience and beautiful trust",
+    "summary": "Surah Yusuf teaches patience during betrayal, temptation, false accusation, hardship, leadership, forgiveness, and reunion.",
+    "objectives": [
+      "Identify the main stages of Yusuf's story.",
+      "Notice how patience changes form in different tests.",
+      "Reflect on forgiveness after gaining power."
+    ],
+    "reading": [
+      "Yusuf عليه السلام faced harm from close family, slavery, temptation, prison, and public responsibility. Each stage required a different kind of patience.",
+      "The story does not romanticize pain. It shows that Allah's plan can unfold through events people do not understand at the time.",
+      "When Yusuf gained authority, he chose forgiveness and gratitude instead of revenge."
+    ],
+    "practice": "Read Quran 12:90 and write one sentence about how taqwa and patience are connected.",
+    "references": ["Quran 12:1-111"]
+  }
+]
