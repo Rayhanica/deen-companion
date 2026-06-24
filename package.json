@@ -5,8 +5,9 @@
   "description": "A production-ready MVP for an all-in-one Islamic learning, worship, and lifestyle companion.",
   "scripts": {
     "dev": "NEXT_DIST_DIR=.next-dev WATCHPACK_POLLING=true next dev",
-    "build": "NEXT_DIST_DIR=.next-build next build",
-    "start": "NEXT_DIST_DIR=.next-build next start",
+    "build": "next build",
+    "build:local": "NEXT_DIST_DIR=.next-build next build",
+    "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "mobile:typecheck": "tsc --noEmit -p apps/mobile/tsconfig.json"
