@@ -10,7 +10,9 @@ import {
   goalsData,
   hadithData,
   islamicCalendarData,
+  communityData,
   knowledgeData,
+  learningPathsData,
   sourcesData,
   tajweedData
 } from "@/lib/content";
@@ -22,7 +24,9 @@ const contentSets = [
   { name: "Tajweed lessons", path: "content/tajweed.json", count: tajweedData.length },
   { name: "Daily goals", path: "content/goals.json", count: goalsData.length },
   { name: "Islamic dates", path: "content/islamic-calendar.json", count: islamicCalendarData.length },
-  { name: "Sources", path: "content/sources.json", count: sourcesData.length }
+  { name: "Sources", path: "content/sources.json", count: sourcesData.length },
+  { name: "Learning paths", path: "content/learning-paths.json", count: learningPathsData.length },
+  { name: "Community seeds", path: "content/community.json", count: communityData.length }
 ];
 
 export function AdminContent() {
@@ -66,8 +70,8 @@ export function AdminContent() {
     <div>
       <PageHeader
         eyebrow="Admin"
-        title="Content system"
-        body="Structured JSON content is easy to review, seed into Supabase, or replace with a CMS later."
+        title="Editorial and scholar review"
+        body="Draft locally, migrate to relational content records, attach exact sources, request qualified review, and publish only verified versions."
       />
 
       <section className="grid gap-4 xl:grid-cols-[360px_1fr]">
@@ -76,7 +80,7 @@ export function AdminContent() {
             <CardHeader>
               <div>
                 <CardTitle>Content files</CardTitle>
-                <CardDescription>Seed data used by the MVP.</CardDescription>
+                <CardDescription>Bootstrap content pending database ingestion.</CardDescription>
               </div>
               <Database className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
             </CardHeader>
@@ -102,10 +106,11 @@ export function AdminContent() {
               <ShieldCheck className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
             </CardHeader>
             <ul className="space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-200">
-              <li>Use simple language and avoid unsourced legal verdicts.</li>
-              <li>Include Quran, hadith, or scholarly source references where relevant.</li>
-              <li>Keep the disclaimer on practical ruling content.</li>
-              <li>Have sensitive topics reviewed by qualified people.</li>
+              <li>Record license and provenance before importing source text.</li>
+              <li>Attach exact Quran, hadith, book, or institutional references.</li>
+              <li>Label consensus, majority, minority, and individual opinions explicitly.</li>
+              <li>Require qualified review for theology, rulings, finance, family, and medical topics.</li>
+              <li>Show whether content is classical, editorial, community submitted, or AI assisted.</li>
             </ul>
           </Card>
         </div>

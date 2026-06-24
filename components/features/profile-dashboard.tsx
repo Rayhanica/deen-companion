@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
-import { Bell, Bookmark, CheckCircle2, Cloud, LogOut, Minus, Plus, Settings, UserRound } from "lucide-react";
+import Link from "next/link";
+import { Bell, Bookmark, BookOpenText, CheckCircle2, Cloud, LogOut, Minus, Plus, Settings, UsersRound, UserRound } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,6 +27,8 @@ export function ProfileDashboard() {
   const [password, setPassword] = useState("");
   const [authMode, setAuthMode] = useState<"signin" | "signup">("signin");
   const [authMessage, setAuthMessage] = useState("");
+  const [noteTitle, setNoteTitle] = useState("");
+  const [noteBody, setNoteBody] = useState("");
   const todayCompleted = state.completedDeeds[todayKey()] ?? [];
 
   const totals = useMemo(
@@ -61,6 +64,26 @@ export function ProfileDashboard() {
     if (!("Notification" in window)) return;
     const permission = await Notification.requestPermission();
     updatePreferences({ notifications: permission === "granted" });
+  }
+
+  function addVaultNote(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!noteTitle.trim() || !noteBody.trim()) return;
+    updateState((current) => ({
+      ...current,
+      personalVault: [
+        {
+          id: crypto.randomUUID(),
+          title: noteTitle.trim(),
+          body: noteBody.trim(),
+          tags: [],
+          updatedAt: new Date().toISOString()
+        },
+        ...(current.personalVault ?? [])
+      ]
+    }));
+    setNoteTitle("");
+    setNoteBody("");
   }
 
   return (
@@ -139,10 +162,35 @@ export function ProfileDashboard() {
                 <select
                   id="language"
                   value={state.preferences.language}
-                  onChange={() => updatePreferences({ language: "en" })}
+                  onChange={(event) => updatePreferences({ language: event.target.value as typeof state.preferences.language })}
                   className="mt-2 h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-ink outline-none focus:border-reed dark:border-white/10 dark:bg-slate-950 dark:text-white"
                 >
                   <option value="en">English</option>
+                  <option value="ar">Arabic</option>
+                  <option value="ha">Hausa</option>
+                  <option value="ur">Urdu</option>
+                  <option value="fr">French</option>
+                  <option value="tr">Turkish</option>
+                  <option value="id">Indonesian</option>
+                  <option value="bn">Bengali</option>
+                </select>
+                <span className="mt-1 block text-xs font-normal leading-5 text-slate-500 dark:text-slate-400">
+                  Your locale is saved now. Interface and content translations publish independently after review.
+                </span>
+              </label>
+              <label className="block text-sm font-medium text-ink dark:text-white" htmlFor="journey-stage">
+                Journey stage
+                <select
+                  id="journey-stage"
+                  value={state.preferences.journeyStage}
+                  onChange={(event) => updatePreferences({ journeyStage: event.target.value as typeof state.preferences.journeyStage })}
+                  className="mt-2 h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-ink dark:border-white/10 dark:bg-slate-950 dark:text-white"
+                >
+                  <option value="new-muslim">New Muslim</option>
+                  <option value="growing">Growing foundations</option>
+                  <option value="practicing">Practicing Muslim</option>
+                  <option value="student">Student of knowledge</option>
+                  <option value="teacher">Teacher or imam</option>
                 </select>
               </label>
               <label className="block text-sm font-medium text-ink dark:text-white" htmlFor="translation">
@@ -189,6 +237,15 @@ export function ProfileDashboard() {
                 <Bell className="h-4 w-4" aria-hidden="true" />
                 {state.preferences.notifications ? "Notifications enabled" : "Enable notifications"}
               </Button>
+              <label className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 p-3 text-sm font-medium text-ink dark:border-white/10 dark:text-white">
+                Accessibility mode
+                <input
+                  type="checkbox"
+                  checked={state.preferences.accessibilityMode ?? false}
+                  onChange={(event) => updatePreferences({ accessibilityMode: event.target.checked })}
+                  className="h-5 w-5 accent-reed"
+                />
+              </label>
             </div>
           </Card>
         </div>
@@ -222,6 +279,53 @@ export function ProfileDashboard() {
                 <p className="font-semibold text-reed dark:text-teal-200">{todayCompleted.length}/8</p>
               </div>
               <ProgressBar value={percentage(todayCompleted.length, 8)} className="mt-3" />
+            </div>
+          </Card>
+
+          <section className="grid gap-3 md:grid-cols-2">
+            <Link href="/family" className="rounded-lg border border-slate-200/80 bg-white p-5 transition hover:border-reed/30 dark:border-white/10 dark:bg-white/[0.045]">
+              <UsersRound className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
+              <h2 className="mt-3 font-semibold text-ink dark:text-white">Family dashboard</h2>
+              <p className="mt-1 text-sm leading-6 text-slate-500 dark:text-slate-400">Child profiles, assignments, Quran goals, salah, and family routines.</p>
+            </Link>
+            <Link href="/learn/paths" className="rounded-lg border border-slate-200/80 bg-white p-5 transition hover:border-reed/30 dark:border-white/10 dark:bg-white/[0.045]">
+              <BookOpenText className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
+              <h2 className="mt-3 font-semibold text-ink dark:text-white">My learning paths</h2>
+              <p className="mt-1 text-sm leading-6 text-slate-500 dark:text-slate-400">{state.enrolledPaths?.length ?? 0} enrolled paths · {state.completedLessons?.length ?? 0} lessons complete.</p>
+            </Link>
+          </section>
+
+          <Card id="knowledge-vault">
+            <CardHeader>
+              <div>
+                <CardTitle>Personal knowledge vault</CardTitle>
+                <CardDescription>Private notes searchable from the global search bar.</CardDescription>
+              </div>
+              <BookOpenText className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
+            </CardHeader>
+            <form onSubmit={addVaultNote} className="grid gap-3 sm:grid-cols-[0.7fr_1.3fr_auto]">
+              <input
+                value={noteTitle}
+                onChange={(event) => setNoteTitle(event.target.value)}
+                placeholder="Note title"
+                className="h-11 rounded-lg border border-slate-200 bg-white px-3 text-sm text-ink dark:border-white/10 dark:bg-slate-950 dark:text-white"
+              />
+              <input
+                value={noteBody}
+                onChange={(event) => setNoteBody(event.target.value)}
+                placeholder="Reflection, lesson, or research note"
+                className="h-11 rounded-lg border border-slate-200 bg-white px-3 text-sm text-ink dark:border-white/10 dark:bg-slate-950 dark:text-white"
+              />
+              <Button type="submit">Save note</Button>
+            </form>
+            <div className="mt-4 space-y-2">
+              {(state.personalVault ?? []).slice(0, 5).map((note) => (
+                <div key={note.id} className="rounded-lg bg-[#f3f7f4] p-3 dark:bg-white/[0.045]">
+                  <p className="text-sm font-semibold text-ink dark:text-white">{note.title}</p>
+                  <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-300">{note.body}</p>
+                </div>
+              ))}
+              {!(state.personalVault ?? []).length ? <p className="text-sm text-slate-500">No saved knowledge notes yet.</p> : null}
             </div>
           </Card>
 

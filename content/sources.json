@@ -1,38 +1,114 @@
 [
   {
+    "id": "quran-com",
+    "name": "Quran.com",
+    "url": "https://quran.com/",
+    "usage": "Ayah-level Quran reading, translations, recitations, tafsir resources, and learning tools.",
+    "category": "Quran",
+    "authority": "Primary"
+  },
+  {
     "id": "alquran-cloud",
     "name": "Al Quran Cloud",
     "url": "https://alquran.cloud/api",
-    "usage": "Quran Arabic text, translations, transliteration, audio, surah and juz navigation."
+    "usage": "Quran Arabic text, translations, transliteration, audio, surah and juz navigation, and full-Quran search.",
+    "category": "Quran",
+    "authority": "Primary"
+  },
+  {
+    "id": "quran-foundation",
+    "name": "Quran Foundation APIs",
+    "url": "https://api-docs.quran.foundation/",
+    "usage": "Authenticated Quran content, tafsir, translations, search, bookmarks, notes, and reading progress.",
+    "category": "Quran",
+    "authority": "Primary"
+  },
+  {
+    "id": "quran-corpus",
+    "name": "Quranic Arabic Corpus",
+    "url": "https://corpus.quran.com/",
+    "usage": "Word-by-word morphology, syntax, grammar, and Quranic Arabic analysis from the University of Leeds project.",
+    "category": "Arabic",
+    "authority": "Reference"
+  },
+  {
+    "id": "tanzil",
+    "name": "Tanzil Quran Text",
+    "url": "https://tanzil.net/docs/home",
+    "usage": "Verified digital Quran text, translations, and Quran text documentation.",
+    "category": "Quran",
+    "authority": "Primary"
+  },
+  {
+    "id": "sunnah-com",
+    "name": "Sunnah.com",
+    "url": "https://sunnah.com/",
+    "usage": "Searchable hadith collections with collection, book, chapter, and hadith numbering.",
+    "category": "Hadith",
+    "authority": "Primary"
+  },
+  {
+    "id": "dorar-hadith",
+    "name": "Dorar Hadith Encyclopedia",
+    "url": "https://dorar.net/hadith",
+    "usage": "Arabic hadith search, sourcing, grading notes, and explanations.",
+    "category": "Hadith",
+    "authority": "Reference"
   },
   {
     "id": "aladhan",
     "name": "AlAdhan",
     "url": "https://aladhan.com/prayer-times-api",
-    "usage": "Prayer times, calculation methods, madhab school parameter, Hijri calendar data, qibla direction."
+    "usage": "Prayer times, calculation methods, madhab school parameter, Hijri calendar data, and qibla direction.",
+    "category": "Worship",
+    "authority": "Primary"
   },
   {
-    "id": "quran-foundation",
-    "name": "Quran Foundation APIs",
-    "url": "https://api-docs.quran.com/",
-    "usage": "Production upgrade path for typed SDKs, content APIs, search, OAuth, bookmarks, notes, and reading progress."
+    "id": "dar-al-ifta-egypt",
+    "name": "Dar al-Ifta al-Misriyyah",
+    "url": "https://www.dar-alifta.org/en",
+    "usage": "Institutional fatwa archive and general Islamic guidance. Personal cases still require direct consultation.",
+    "category": "Rulings",
+    "authority": "Reference"
   },
   {
-    "id": "hadith-api",
-    "name": "Hadith API",
-    "url": "https://hadithapi.com/docs/hadiths",
-    "usage": "Optional server-side hadith search if a private API key is configured."
+    "id": "seekers-guidance",
+    "name": "SeekersGuidance",
+    "url": "https://seekersguidance.org/",
+    "usage": "Structured introductory courses and answered questions across recognized Sunni legal schools.",
+    "category": "Learning",
+    "authority": "Learning"
+  },
+  {
+    "id": "yaqeen-institute",
+    "name": "Yaqeen Institute",
+    "url": "https://yaqeeninstitute.org/read",
+    "usage": "Accessible research papers and learning series on faith, seerah, spirituality, and contemporary questions.",
+    "category": "Learning",
+    "authority": "Learning"
+  },
+  {
+    "id": "muslim-heritage",
+    "name": "Muslim Heritage",
+    "url": "https://muslimheritage.com/",
+    "usage": "Articles and research on Muslim history, civilization, science, culture, and institutions.",
+    "category": "History",
+    "authority": "Learning"
   },
   {
     "id": "openai-responses",
     "name": "OpenAI Responses API",
-    "url": "https://developers.openai.com/api/docs/guides/text?api-mode=responses",
-    "usage": "Optional AI companion for personalized study guidance and source-aware web browsing when OPENAI_API_KEY is configured."
+    "url": "https://developers.openai.com/api/docs/guides/tools-web-search",
+    "usage": "Optional AI companion with hosted web search and clickable URL citations when an API key is configured.",
+    "category": "Technology",
+    "authority": "Primary"
   },
   {
     "id": "openstreetmap",
     "name": "OpenStreetMap, Nominatim, and Overpass",
     "url": "https://wiki.openstreetmap.org/wiki/Overpass_API",
-    "usage": "Masjid and halal restaurant finder using open map data with attribution."
+    "usage": "Masjid and halal restaurant finder using open map data with attribution.",
+    "category": "Places",
+    "authority": "Primary"
   }
 ]

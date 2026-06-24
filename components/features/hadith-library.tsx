@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Bookmark, BookText, Search, Sparkles } from "lucide-react";
+import { Bookmark, BookText, ExternalLink, Search, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +11,7 @@ import { getDailyItem, hadithData } from "@/lib/content";
 import type { Hadith } from "@/lib/types";
 import { cn, unique } from "@/lib/utils";
 import { useUserState } from "@/lib/user-state";
+import { resolveReference } from "@/lib/source-links";
 
 const collections = ["Bukhari", "Muslim", "Nawawi 40", "Riyad as-Salihin", "Tirmidhi", "Abu Dawud", "Ibn Majah"];
 
@@ -44,7 +45,7 @@ export function HadithLibrary() {
       <PageHeader
         eyebrow="Hadith"
         title="Library and daily reminder"
-        body="Search hadith samples by keyword and category, bookmark narrations, and prepare for API-backed expansion."
+        body="Search reviewed narrations by keyword and category, save bookmarks, and open direct collection references."
       />
 
       <section className="grid gap-4 xl:grid-cols-[340px_1fr]">
@@ -58,6 +59,15 @@ export function HadithLibrary() {
               <Sparkles className="h-6 w-6 text-saffron" aria-hidden="true" />
             </CardHeader>
             <p className="text-sm leading-7 text-slate-700 dark:text-slate-200">{dailyHadith.text}</p>
+            <a
+              href={resolveReference(dailyHadith.reference).url}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-reed hover:underline dark:text-teal-200"
+            >
+              Open {dailyHadith.reference}
+              <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+            </a>
           </Card>
 
           <Card>
@@ -139,13 +149,34 @@ export function HadithLibrary() {
                     </Button>
                   </div>
                   <p className="mt-4 text-sm leading-7 text-slate-700 dark:text-slate-200">{hadith.text}</p>
-                  <p className="mt-4 text-xs font-medium text-slate-500 dark:text-slate-400">{hadith.reference}</p>
+                  <a
+                    href={resolveReference(hadith.reference).url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-reed hover:underline dark:text-teal-200"
+                  >
+                    {hadith.reference}
+                    <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                  </a>
                 </Card>
               );
             })
           ) : null}
           {!loading && !results.length ? (
-            <EmptyState title="No hadith found" body="Try another keyword or category." />
+            <div className="space-y-3">
+              <EmptyState title="No reviewed local hadith found" body="Try another keyword or search the wider hadith library." />
+              {query.trim() ? (
+                <a
+                  href={`https://sunnah.com/search?q=${encodeURIComponent(query.trim())}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-11 items-center justify-center gap-2 rounded-lg bg-reed px-4 text-sm font-medium text-white"
+                >
+                  Search Sunnah.com
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : null}
+            </div>
           ) : null}
         </div>
       </section>

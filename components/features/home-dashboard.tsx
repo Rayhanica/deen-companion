@@ -2,18 +2,30 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { BookMarked, CalendarDays, CheckCircle2, ChevronRight, Clock3, Flame, MoonStar } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ProgressBar } from "@/components/ui/progress";
+import {
+  ArrowRight,
+  BookOpen,
+  CalendarCheck2,
+  Check,
+  Clock3,
+  Flame,
+  GraduationCap,
+  MapPin,
+  Search,
+  Sparkles,
+  Target,
+  UsersRound
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
 import { LoadingState } from "@/components/ui/state";
-import { getDailyItem, duasData, goalsData, hadithData } from "@/lib/content";
+import { getDailyItem, duasData, goalsData, hadithData, learningPathsData, studyGuidesData } from "@/lib/content";
 import { formatMinutes, percentage, todayKey } from "@/lib/utils";
 import { useCountdown } from "@/hooks/use-countdown";
 import { useUserState } from "@/lib/user-state";
-import type { PrayerTimings } from "@/lib/types";
+import type { PrayerName, PrayerTimings } from "@/lib/types";
 import { formatPrayerClock, getNextPrayer } from "@/lib/prayer-utils";
+
+const prayerNames: PrayerName[] = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
 const fallbackAyah = {
   arabic: "رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ",
@@ -21,8 +33,14 @@ const fallbackAyah = {
   reference: "Quran 2:127"
 };
 
+function dateKey(daysAgo: number) {
+  const date = new Date();
+  date.setDate(date.getDate() - daysAgo);
+  return date.toISOString().slice(0, 10);
+}
+
 export function HomeDashboard() {
-  const { state, toggleDeed, toggleFastingDay } = useUserState();
+  const { state, toggleDeed } = useUserState();
   const [timings, setTimings] = useState<PrayerTimings | null>(null);
   const [loadingPrayer, setLoadingPrayer] = useState(true);
   const today = todayKey();
@@ -31,7 +49,28 @@ export function HomeDashboard() {
   const dailyHadith = getDailyItem(hadithData);
   const nextPrayer = useMemo(() => getNextPrayer(timings), [timings]);
   const seconds = useCountdown(nextPrayer?.date);
-  const deedProgress = percentage(completed.length, goalsData.length);
+  const dailyChallenge = goalsData[new Date().getDate() % goalsData.length];
+  const challengeDone = completed.includes(dailyChallenge.id);
+  const enrolledPath = learningPathsData.find((path) => (state.enrolledPaths ?? []).includes(path.id));
+  const recommendedPath =
+    learningPathsData.find((path) =>
+      state.preferences.journeyStage === "new-muslim"
+        ? path.id === "new-muslim-12-weeks"
+        : state.preferences.interests?.some((interest) => path.title.toLowerCase().includes(interest.toLowerCase()))
+    ) ?? learningPathsData[0];
+  const recommendedArticle = studyGuidesData[new Date().getDay() % studyGuidesData.length];
+  const nextMemorization = state.memorizedAyahs.at(-1) ?? "112:1";
+  const weeklyCompleted = Array.from({ length: 7 }, (_, index) => state.completedDeeds[dateKey(index)]?.length ?? 0);
+  const weeklyTotal = weeklyCompleted.reduce((sum, value) => sum + value, 0);
+  const weeklyProgress = percentage(weeklyTotal, goalsData.length * 7);
+  const streak = useMemo(() => {
+    let count = 0;
+    for (let index = 0; index < 365; index += 1) {
+      if ((state.completedDeeds[dateKey(index)]?.length ?? 0) === 0) break;
+      count += 1;
+    }
+    return count;
+  }, [state.completedDeeds]);
 
   useEffect(() => {
     const params = new URLSearchParams({
@@ -55,181 +94,225 @@ export function HomeDashboard() {
 
   return (
     <div className="space-y-6">
-      <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-        <Card className="overflow-hidden p-0">
-          <div className="bg-reed px-5 py-6 text-white dark:bg-teal-900">
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-sm font-medium text-white/75">Today</p>
-                <h1 className="mt-2 text-3xl font-bold md:text-4xl">Assalamu alaykum</h1>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-white/82">
-                  A focused space for Quran, salah, dhikr, learning, and steady daily progress.
-                </p>
+      <header className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-sm font-medium text-reed dark:text-teal-200">Assalamu alaykum</p>
+          <h1 className="mt-1 text-2xl font-bold text-ink dark:text-white md:text-3xl">Your day with Deen</h1>
+        </div>
+        <p className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+          <MapPin className="h-4 w-4" aria-hidden="true" />
+          {state.preferences.city}, {state.preferences.country}
+        </p>
+      </header>
+
+      {loadingPrayer ? (
+        <LoadingState label="Loading prayer times" />
+      ) : timings && nextPrayer ? (
+        <section className="overflow-hidden rounded-lg border border-reed/15 bg-reed text-white shadow-soft dark:border-white/10 dark:bg-[#23473d]">
+          <div className="grid gap-5 px-5 py-5 lg:grid-cols-[0.65fr_1.35fr] lg:px-7">
+            <div>
+              <p className="text-sm font-medium text-white/70">Next prayer</p>
+              <div className="mt-2 flex items-end gap-3">
+                <h2 className="text-4xl font-bold">{nextPrayer.name}</h2>
+                <p className="pb-1 text-xl font-semibold text-white/80">{formatPrayerClock(nextPrayer.time)}</p>
               </div>
-              <MoonStar className="h-9 w-9 text-saffron" aria-hidden="true" />
-            </div>
-          </div>
-          <div className="grid gap-4 p-5 sm:grid-cols-3">
-            <div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Daily deeds</p>
-              <p className="mt-1 text-2xl font-semibold text-ink dark:text-white">{deedProgress}%</p>
-              <ProgressBar value={deedProgress} className="mt-3" />
-            </div>
-            <div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Quran goal</p>
-              <p className="mt-1 text-2xl font-semibold text-ink dark:text-white">
-                {state.preferences.dailyQuranMinutes}m
+              <p className="mt-3 flex items-center gap-2 text-sm text-white/75">
+                <Clock3 className="h-4 w-4" aria-hidden="true" />
+                In {formatMinutes(seconds)} · {timings.hijriDate}
               </p>
-              <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">Daily target</p>
             </div>
-            <div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">Streak signal</p>
-              <p className="mt-1 flex items-center gap-2 text-2xl font-semibold text-ink dark:text-white">
-                <Flame className="h-6 w-6 text-clay" aria-hidden="true" />
-                {completed.length}
-              </p>
-              <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">Actions today</p>
-            </div>
-          </div>
-        </Card>
-
-        {loadingPrayer ? (
-          <LoadingState label="Loading prayer times" />
-        ) : (
-          <Card>
-            <CardHeader>
-              <div>
-                <CardTitle>Next prayer</CardTitle>
-                <CardDescription>{timings?.hijriDate ?? state.preferences.city}</CardDescription>
-              </div>
-              <Clock3 className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
-            </CardHeader>
-            {nextPrayer ? (
-              <div className="space-y-5">
-                <div>
-                  <div className="flex items-end justify-between gap-3">
-                    <p className="text-3xl font-bold text-ink dark:text-white">{nextPrayer.name}</p>
-                    <p className="text-xl font-semibold text-reed dark:text-teal-200">
-                      {formatPrayerClock(nextPrayer.time)}
-                    </p>
-                  </div>
-                  <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                    Begins in {formatMinutes(seconds)}
-                  </p>
-                </div>
-                <Link href="/prayer">
-                  <Button className="w-full">
-                    Open prayer tools
-                    <ChevronRight className="h-4 w-4" aria-hidden="true" />
-                  </Button>
-                </Link>
-              </div>
-            ) : (
-              <p className="text-sm text-slate-600 dark:text-slate-300">Set your city in Prayer or Profile.</p>
-            )}
-          </Card>
-        )}
-      </section>
-
-      <section className="grid gap-4 xl:grid-cols-3">
-        <Card>
-          <CardHeader>
-            <div>
-              <CardTitle>Daily ayah</CardTitle>
-              <CardDescription>{fallbackAyah.reference}</CardDescription>
-            </div>
-            <BookMarked className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
-          </CardHeader>
-          <p className="arabic-text text-right text-2xl font-semibold text-ink dark:text-white">{fallbackAyah.arabic}</p>
-          <p className="mt-4 text-sm leading-6 text-slate-700 dark:text-slate-200">{fallbackAyah.translation}</p>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <div>
-              <CardTitle>Daily hadith</CardTitle>
-              <CardDescription>{dailyHadith.reference}</CardDescription>
-            </div>
-            <Badge>{dailyHadith.category}</Badge>
-          </CardHeader>
-          <p className="text-sm leading-6 text-slate-700 dark:text-slate-200">{dailyHadith.text}</p>
-          <Link href="/learn/hadith" className="mt-4 inline-flex text-sm font-medium text-reed dark:text-teal-200">
-            Hadith library
-          </Link>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <div>
-              <CardTitle>Daily dua</CardTitle>
-              <CardDescription>{dailyDua.reference}</CardDescription>
-            </div>
-            <Badge>{dailyDua.category}</Badge>
-          </CardHeader>
-          <p className="arabic-text text-right text-xl font-semibold text-ink dark:text-white">{dailyDua.arabic}</p>
-          <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-200">{dailyDua.translation}</p>
-        </Card>
-      </section>
-
-      <section className="grid gap-4 lg:grid-cols-[1fr_0.8fr]">
-        <Card>
-          <CardHeader>
-            <div>
-              <CardTitle>Today’s goals</CardTitle>
-              <CardDescription>Track small deeds consistently.</CardDescription>
-            </div>
-            <CheckCircle2 className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
-          </CardHeader>
-          <div className="grid gap-2 sm:grid-cols-2">
-            {goalsData.map((goal) => {
-              const checked = completed.includes(goal.id);
-              return (
-                <button
-                  key={goal.id}
-                  type="button"
-                  onClick={() => toggleDeed(goal.id)}
-                  className="flex min-h-14 items-center justify-between gap-3 rounded-lg border border-black/5 bg-white/70 px-3 text-left text-sm transition hover:border-reed/30 dark:border-white/10 dark:bg-white/[0.04]"
-                >
-                  <span className="font-medium text-ink dark:text-white">{goal.title}</span>
-                  <span
-                    className={`flex h-6 w-6 items-center justify-center rounded-full border ${
-                      checked
-                        ? "border-reed bg-reed text-white"
-                        : "border-slate-300 text-transparent dark:border-slate-600"
+            <div className="grid grid-cols-5 gap-1 rounded-lg bg-white/8 p-2 sm:gap-2">
+              {prayerNames.map((name) => {
+                const active = nextPrayer.name === name;
+                return (
+                  <div
+                    key={name}
+                    className={`flex min-w-0 flex-col items-center justify-center rounded-md px-1 py-3 text-center ${
+                      active ? "bg-white text-reed" : "text-white"
                     }`}
                   >
-                    <CheckCircle2 className="h-4 w-4" aria-hidden="true" />
-                  </span>
-                </button>
-              );
-            })}
+                    <span className={`text-[11px] font-medium sm:text-xs ${active ? "text-reed" : "text-white/65"}`}>{name}</span>
+                    <span className="mt-1 text-xs font-semibold sm:text-sm">{formatPrayerClock(timings[name])}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <Link href="/prayer" className="flex min-h-11 items-center justify-between border-t border-white/10 px-5 text-sm font-medium hover:bg-white/8 lg:px-7">
+            Prayer calendar, qibla, reminders, and travel settings
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </section>
+      ) : (
+        <Card>
+          <h2 className="font-semibold text-ink dark:text-white">Prayer times need a location</h2>
+          <Link href="/prayer" className="mt-3 inline-flex text-sm font-medium text-reed dark:text-teal-200">Set prayer location</Link>
+        </Card>
+      )}
+
+      <section className="grid gap-3 sm:grid-cols-3">
+        <Metric icon={Flame} value={String(streak)} label="Day streak" />
+        <Metric icon={CalendarCheck2} value={`${weeklyProgress}%`} label="Weekly progress" />
+        <Metric icon={Target} value={`${completed.length}/${goalsData.length}`} label="Today’s deeds" />
+      </section>
+
+      <section className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
+        <Card>
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase text-reed dark:text-teal-200">Daily ayah</p>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{fallbackAyah.reference}</p>
+            </div>
+            <Link href="/quran" className="text-sm font-medium text-reed dark:text-teal-200">Study ayah</Link>
+          </div>
+          <p className="arabic-text mt-4 text-right text-3xl font-semibold text-ink dark:text-white">{fallbackAyah.arabic}</p>
+          <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200">{fallbackAyah.translation}</p>
+        </Card>
+
+        <Card>
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase text-saffron">Daily challenge</p>
+              <h2 className="mt-2 text-lg font-semibold text-ink dark:text-white">{dailyChallenge.title}</h2>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Complete one focused action today.</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => toggleDeed(dailyChallenge.id)}
+              className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border ${
+                challengeDone ? "border-reed bg-reed text-white" : "border-slate-300 text-slate-400 dark:border-slate-600"
+              }`}
+              aria-label={challengeDone ? "Mark challenge incomplete" : "Complete challenge"}
+            >
+              <Check className="h-5 w-5" aria-hidden="true" />
+            </button>
+          </div>
+        </Card>
+      </section>
+
+      <section>
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-lg font-semibold text-ink dark:text-white">Continue</h2>
+        </div>
+        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <ContinueCard
+            icon={GraduationCap}
+            eyebrow="Learning"
+            title={enrolledPath?.title ?? recommendedPath.title}
+            detail={enrolledPath ? "Continue your enrolled path" : "Recommended starting path"}
+            href={`/learn/paths?path=${enrolledPath?.id ?? recommendedPath.id}`}
+          />
+          <ContinueCard
+            icon={BookOpen}
+            eyebrow="Memorization"
+            title={`Review ayah ${nextMemorization}`}
+            detail={`${state.memorizedAyahs.length} ayahs marked memorized`}
+            href="/quran"
+          />
+          <ContinueCard
+            icon={UsersRound}
+            eyebrow="Community"
+            title="Find a class or study circle"
+            detail="Local and online learning opportunities"
+            href="/community"
+          />
+        </div>
+      </section>
+
+      <section className="grid gap-4 xl:grid-cols-[0.75fr_1.25fr]">
+        <Card>
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold text-ink dark:text-white">Recent searches</h2>
+            <Search className="h-4 w-4 text-slate-400" aria-hidden="true" />
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {(state.recentSearches ?? []).length ? (
+              (state.recentSearches ?? []).slice(0, 6).map((search) => (
+                <Link
+                  key={search}
+                  href={`/learn?mode=sources&query=${encodeURIComponent(search)}`}
+                  className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-medium text-slate-600 dark:bg-white/10 dark:text-slate-300"
+                >
+                  {search}
+                </Link>
+              ))
+            ) : (
+              <p className="text-sm leading-6 text-slate-500">Your global searches will appear here for quick return.</p>
+            )}
           </div>
         </Card>
 
         <Card>
-          <CardHeader>
+          <div className="flex items-center justify-between gap-3">
             <div>
-              <CardTitle>Fasting tracker</CardTitle>
-              <CardDescription>Useful for Ramadan, Mondays/Thursdays, and make-up fasts.</CardDescription>
+              <p className="text-xs font-semibold uppercase text-reed dark:text-teal-200">Recommended for you</p>
+              <h2 className="mt-2 text-lg font-semibold text-ink dark:text-white">{recommendedArticle.title}</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-300">{recommendedArticle.overview}</p>
             </div>
-            <CalendarDays className="h-6 w-6 text-reed dark:text-teal-200" aria-hidden="true" />
-          </CardHeader>
-          <div className="flex items-center justify-between gap-3 rounded-lg bg-skysoft/55 p-4 dark:bg-white/8">
-            <div>
-              <p className="text-sm text-slate-600 dark:text-slate-300">Today marked as fasting</p>
-              <p className="mt-1 text-2xl font-semibold text-ink dark:text-white">
-                {state.fastingDays.includes(today) ? "Yes" : "No"}
-              </p>
-            </div>
-            <Button variant={state.fastingDays.includes(today) ? "secondary" : "primary"} onClick={() => toggleFastingDay()}>
-              {state.fastingDays.includes(today) ? "Unmark" : "Mark"}
-            </Button>
+            <Sparkles className="h-6 w-6 shrink-0 text-saffron" aria-hidden="true" />
           </div>
-          <p className="mt-4 text-sm text-slate-600 dark:text-slate-300">
-            Total recorded fasts: <span className="font-semibold text-ink dark:text-white">{state.fastingDays.length}</span>
-          </p>
+          <Link
+            href={`/learn?mode=knowledge&resource=${recommendedArticle.id}#${recommendedArticle.id}`}
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-reed dark:text-teal-200"
+          >
+            Read recommendation
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </Card>
       </section>
+
+      <section className="grid gap-3 md:grid-cols-2">
+        <DailyText title={`Daily hadith · ${dailyHadith.reference}`} body={dailyHadith.text} href="/learn/hadith" />
+        <DailyText title={`Daily dua · ${dailyDua.reference}`} body={dailyDua.translation} href="/duas" />
+      </section>
     </div>
+  );
+}
+
+function Metric({ icon: Icon, value, label }: { icon: typeof Flame; value: string; label: string }) {
+  return (
+    <div className="flex items-center gap-3 rounded-lg border border-slate-200/80 bg-white p-4 dark:border-white/10 dark:bg-white/[0.045]">
+      <Icon className="h-5 w-5 text-reed dark:text-teal-200" aria-hidden="true" />
+      <span>
+        <span className="block text-xl font-bold text-ink dark:text-white">{value}</span>
+        <span className="block text-xs text-slate-500 dark:text-slate-400">{label}</span>
+      </span>
+    </div>
+  );
+}
+
+function ContinueCard({
+  icon: Icon,
+  eyebrow,
+  title,
+  detail,
+  href
+}: {
+  icon: typeof BookOpen;
+  eyebrow: string;
+  title: string;
+  detail: string;
+  href: string;
+}) {
+  return (
+    <Link href={href} className="group flex min-h-28 gap-4 rounded-lg border border-slate-200/80 bg-white p-4 transition hover:border-reed/35 dark:border-white/10 dark:bg-white/[0.045]">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-reed/10 text-reed dark:text-teal-200">
+        <Icon className="h-5 w-5" aria-hidden="true" />
+      </span>
+      <span className="min-w-0">
+        <span className="text-xs font-semibold uppercase text-slate-400">{eyebrow}</span>
+        <span className="mt-1 block font-semibold text-ink group-hover:text-reed dark:text-white">{title}</span>
+        <span className="mt-1 block text-xs leading-5 text-slate-500 dark:text-slate-400">{detail}</span>
+      </span>
+    </Link>
+  );
+}
+
+function DailyText({ title, body, href }: { title: string; body: string; href: string }) {
+  return (
+    <Link href={href} className="rounded-lg border border-slate-200/80 bg-white px-5 py-4 transition hover:border-reed/30 dark:border-white/10 dark:bg-white/[0.035]">
+      <p className="text-xs font-semibold uppercase text-slate-400">{title}</p>
+      <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-200">{body}</p>
+    </Link>
   );
 }

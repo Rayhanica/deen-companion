@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Compass, GraduationCap, HandHeart, Home, UserRound } from "lucide-react";
+import { BookOpen, GraduationCap, Home, UsersRound, UserRound } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/quran", label: "Quran", icon: BookOpen },
-  { href: "/prayer", label: "Prayer", icon: Compass },
   { href: "/learn", label: "Learn", icon: GraduationCap },
-  { href: "/duas", label: "Duas", icon: HandHeart },
+  { href: "/community", label: "Community", icon: UsersRound },
   { href: "/profile", label: "Profile", icon: UserRound }
 ];
 
@@ -22,7 +21,7 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-40 border-t border-black/5 bg-white/94 px-2 pb-[max(env(safe-area-inset-bottom),0.5rem)] pt-2 shadow-[0_-12px_30px_rgba(31,41,51,0.08)] backdrop-blur dark:border-white/10 dark:bg-slate-950/92 md:hidden"
       aria-label="Primary"
     >
-      <div className="mx-auto grid max-w-lg grid-cols-6 gap-1">
+      <div className="mx-auto grid max-w-lg grid-cols-5 gap-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);

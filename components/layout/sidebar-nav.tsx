@@ -2,35 +2,47 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Bot, Compass, GraduationCap, HandHeart, Home, MapPin, UserRound } from "lucide-react";
+import {
+  BookHeart,
+  BookOpen,
+  Bot,
+  Clock3,
+  Database,
+  GraduationCap,
+  Home,
+  MapPin,
+  UsersRound,
+  UserRound
+} from "lucide-react";
+import { BrandMark } from "@/components/ui/brand-mark";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
   { href: "/quran", label: "Quran", icon: BookOpen },
-  { href: "/prayer", label: "Prayer", icon: Compass },
   { href: "/learn", label: "Learn", icon: GraduationCap },
-  { href: "/duas", label: "Duas", icon: HandHeart },
+  { href: "/community", label: "Community", icon: UsersRound },
   { href: "/profile", label: "Profile", icon: UserRound }
 ];
 
 const secondaryItems = [
-  { href: "/ai", label: "AI Guide", icon: Bot },
-  { href: "/find", label: "Find Nearby", icon: MapPin }
+  { href: "/prayer", label: "Prayer & Qibla", icon: Clock3 },
+  { href: "/duas", label: "Duas & Dhikr", icon: BookHeart },
+  { href: "/ai", label: "Ask Deen Companion", icon: Bot },
+  { href: "/learn?mode=sources", label: "Source Library", icon: Database },
+  { href: "/find", label: "Masjid & Halal", icon: MapPin }
 ];
 
 export function SidebarNav() {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky top-0 hidden h-screen w-72 shrink-0 border-r border-black/5 bg-white/68 px-4 py-5 backdrop-blur dark:border-white/10 dark:bg-white/[0.04] md:block">
+    <aside className="sticky top-0 hidden h-screen w-64 shrink-0 border-r border-slate-200/80 bg-white px-4 py-5 dark:border-white/10 dark:bg-[#131c18] md:block">
       <Link href="/" className="mb-8 flex items-center gap-3 rounded-lg px-2">
-        <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-reed text-lg font-bold text-white">
-          DC
-        </span>
+        <BrandMark className="h-11 w-11 border border-amber-300/40 shadow-sm" priority />
         <span>
           <span className="block text-base font-semibold text-ink dark:text-white">Deen Companion</span>
-          <span className="block text-xs text-slate-500 dark:text-slate-400">Daily worship, simply</span>
+          <span className="block text-xs text-slate-500 dark:text-slate-400">Your deen. One companion.</span>
         </span>
       </Link>
       <nav className="space-y-1" aria-label="Primary">
@@ -42,9 +54,9 @@ export function SidebarNav() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex h-11 items-center gap-3 rounded-lg px-3 text-sm font-medium transition",
+                "flex h-10 items-center gap-3 rounded-lg px-3 text-sm font-medium transition",
                 active
-                  ? "bg-reed text-white shadow-sm"
+                  ? "bg-reed text-white"
                   : "text-slate-600 hover:bg-reed/10 hover:text-reed dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
               )}
             >
@@ -66,7 +78,7 @@ export function SidebarNav() {
               className={cn(
                 "flex h-10 items-center gap-3 rounded-lg px-3 text-sm font-medium transition",
                 active
-                  ? "bg-reed text-white shadow-sm"
+                  ? "bg-reed text-white"
                   : "text-slate-600 hover:bg-reed/10 hover:text-reed dark:text-slate-300 dark:hover:bg-white/10 dark:hover:text-white"
               )}
             >

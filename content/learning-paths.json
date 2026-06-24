@@ -1,0 +1,122 @@
+[
+  {
+    "id": "new-muslim-12-weeks",
+    "title": "New Muslim Foundations",
+    "audience": "New Muslims and returning Muslims",
+    "description": "A calm twelve-week journey through belief, purification, prayer, Quran, daily worship, community, and common life questions.",
+    "level": "Beginner",
+    "durationWeeks": 12,
+    "lessonCount": 36,
+    "outcomes": ["Pray the five daily prayers with confidence", "Understand the six pillars of iman", "Build a sustainable daily worship routine"],
+    "modules": [
+      { "title": "Beginning with certainty", "lessons": ["Shahadah and tawhid", "The six pillars of iman", "How to learn safely"] },
+      { "title": "Daily worship", "lessons": ["Wudu", "Salah step by step", "Daily dhikr"] },
+      { "title": "Living Islam", "lessons": ["Halal basics", "Character and family", "Finding community"] }
+    ]
+  },
+  {
+    "id": "quran-arabic-foundations",
+    "title": "Quranic Arabic Foundations",
+    "audience": "Arabic learners",
+    "description": "Letters, reading fluency, high-frequency Quran vocabulary, roots, morphology, and introductory grammar.",
+    "level": "Beginner",
+    "durationWeeks": 16,
+    "lessonCount": 48,
+    "outcomes": ["Read joined Arabic confidently", "Recognize common Quran roots", "Understand basic nominal and verbal sentences"],
+    "modules": [
+      { "title": "Reading", "lessons": ["Letters and articulation", "Vowels and sukoon", "Connected reading"] },
+      { "title": "Vocabulary", "lessons": ["High-frequency Quran words", "Three-letter roots", "Word families"] },
+      { "title": "Grammar", "lessons": ["Nouns and adjectives", "Pronouns", "Past and present verbs"] }
+    ]
+  },
+  {
+    "id": "tajweed-complete",
+    "title": "Tajweed: From Foundations to Fluency",
+    "audience": "Quran readers and hifz students",
+    "description": "A sequenced tajweed curriculum with listening practice, rule identification, recorded recitation, and teacher checkpoints.",
+    "level": "All levels",
+    "durationWeeks": 20,
+    "lessonCount": 60,
+    "outcomes": ["Identify core tajweed rules", "Apply rules consistently in Juz Amma", "Build a teacher-reviewed correction plan"],
+    "modules": [
+      { "title": "Sound production", "lessons": ["Makharij", "Letter qualities", "Heavy and light letters"] },
+      { "title": "Core rules", "lessons": ["Noon and meem rules", "Madd", "Qalqalah"] },
+      { "title": "Fluent recitation", "lessons": ["Waqf and ibtida", "Connected recitation", "Correction practicum"] }
+    ]
+  },
+  {
+    "id": "juz-amma-hifz-90",
+    "title": "Memorize Juz Amma in 90 Days",
+    "audience": "New and returning hifz students",
+    "description": "Daily memorization, spaced revision, weak-ayah tracking, listening assignments, and weekly consolidation.",
+    "level": "Beginner",
+    "durationWeeks": 13,
+    "lessonCount": 90,
+    "outcomes": ["Memorize Juz Amma", "Use a repeatable revision system", "Identify and repair weak transitions"],
+    "modules": [
+      { "title": "Short surahs", "lessons": ["An-Nas to Ad-Duha", "Daily review method", "Audio comparison"] },
+      { "title": "Middle section", "lessons": ["Al-Layl to Al-Buruj", "Transition drills", "Weekly testing"] },
+      { "title": "Longer surahs", "lessons": ["Al-Inshiqaq to An-Naba", "Full-juz review", "Final assessment"] }
+    ]
+  },
+  {
+    "id": "aqeedah-path",
+    "title": "Aqeedah Learning Path",
+    "audience": "Muslims seeking structured foundations",
+    "description": "Tawhid, Allah's names and attributes, prophethood, revelation, the unseen, divine decree, and the Hereafter.",
+    "level": "Intermediate",
+    "durationWeeks": 14,
+    "lessonCount": 42,
+    "outcomes": ["Explain core Sunni beliefs simply", "Connect belief to worship and character", "Recognize when advanced questions require a teacher"],
+    "modules": [
+      { "title": "Knowing Allah", "lessons": ["Tawhid", "Names and attributes", "Worship and reliance"] },
+      { "title": "Revelation", "lessons": ["Messengers", "Books", "Preservation and guidance"] },
+      { "title": "The unseen", "lessons": ["Angels", "Divine decree", "The Last Day"] }
+    ]
+  },
+  {
+    "id": "fiqh-worship-path",
+    "title": "Fiqh of Daily Worship",
+    "audience": "Practicing Muslims and busy professionals",
+    "description": "Purification, prayer, fasting, zakah, travel, illness, and practical worship questions with differences clearly labeled.",
+    "level": "Intermediate",
+    "durationWeeks": 18,
+    "lessonCount": 54,
+    "outcomes": ["Apply agreed worship foundations", "Recognize valid scholarly differences", "Know when a case requires a qualified scholar"],
+    "modules": [
+      { "title": "Purification", "lessons": ["Water and cleanliness", "Wudu and ghusl", "Special circumstances"] },
+      { "title": "Prayer", "lessons": ["Conditions and pillars", "Congregation", "Travel and illness"] },
+      { "title": "Annual worship", "lessons": ["Fasting", "Zakah", "Hajj and Umrah"] }
+    ]
+  },
+  {
+    "id": "student-knowledge-path",
+    "title": "Student of Knowledge Roadmap",
+    "audience": "Serious independent students",
+    "description": "A disciplined introduction to study etiquette, Arabic, aqeedah, fiqh, usul, hadith sciences, tafsir, and supervised reading.",
+    "level": "Advanced",
+    "durationWeeks": 52,
+    "lessonCount": 156,
+    "outcomes": ["Build a coherent one-year curriculum", "Keep sourced study notes", "Understand the limits of unsupervised study"],
+    "modules": [
+      { "title": "Tools", "lessons": ["Study etiquette", "Arabic plan", "Research and citation"] },
+      { "title": "Core sciences", "lessons": ["Aqeedah", "Fiqh and usul", "Hadith and tafsir sciences"] },
+      { "title": "Application", "lessons": ["Book reading", "Teacher review", "Writing and teaching responsibly"] }
+    ]
+  },
+  {
+    "id": "family-faith-path",
+    "title": "Building a Faith-Centered Family",
+    "audience": "Parents, couples, and caregivers",
+    "description": "Family worship, marriage rights, conflict repair, parenting by age, children's Quran learning, and household goals.",
+    "level": "All levels",
+    "durationWeeks": 12,
+    "lessonCount": 36,
+    "outcomes": ["Create a family worship rhythm", "Use age-appropriate Islamic teaching", "Build conflict and budgeting habits"],
+    "modules": [
+      { "title": "Marriage", "lessons": ["Mercy and responsibility", "Communication", "Conflict and repair"] },
+      { "title": "Parenting", "lessons": ["Early childhood", "School years", "Youth and identity"] },
+      { "title": "Family systems", "lessons": ["Family salah", "Goals and chores", "Digital and financial habits"] }
+    ]
+  }
+]

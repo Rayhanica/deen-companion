@@ -154,7 +154,8 @@ export function UserStateProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!hydrated) return;
     document.documentElement.classList.toggle("dark", state.preferences.theme === "dark");
-  }, [hydrated, state.preferences.theme]);
+    document.documentElement.classList.toggle("accessibility", Boolean(state.preferences.accessibilityMode));
+  }, [hydrated, state.preferences.accessibilityMode, state.preferences.theme]);
 
   const updateState = useCallback((updater: (state: UserAppState) => UserAppState) => {
     setState((current) => stamp(updater(current)));

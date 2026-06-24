@@ -4,11 +4,12 @@
   "private": true,
   "description": "A production-ready MVP for an all-in-one Islamic learning, worship, and lifestyle companion.",
   "scripts": {
-    "dev": "WATCHPACK_POLLING=true next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NEXT_DIST_DIR=.next-dev WATCHPACK_POLLING=true next dev",
+    "build": "NEXT_DIST_DIR=.next-build next build",
+    "start": "NEXT_DIST_DIR=.next-build next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "mobile:typecheck": "tsc --noEmit -p apps/mobile/tsconfig.json"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

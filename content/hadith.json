@@ -20,9 +20,9 @@
   {
     "id": "good-character",
     "collection": "Jami at-Tirmidhi",
-    "number": "1162",
+    "number": "3895",
     "category": "character",
-    "title": "Best in character",
+    "title": "Best to their families",
     "text": "The best of you are those who are best to their families.",
     "reference": "Tirmidhi 3895"
   },
@@ -37,8 +37,8 @@
   },
   {
     "id": "repentance",
-    "collection": "Sahih Muslim",
-    "number": "2749",
+    "collection": "Jami at-Tirmidhi",
+    "number": "3537",
     "category": "repentance",
     "title": "Allah accepts repentance",
     "text": "Allah accepts the repentance of His servant so long as the soul has not reached the throat.",
@@ -64,11 +64,47 @@
   },
   {
     "id": "marriage",
-    "collection": "Sunan Ibn Majah",
-    "number": "1846",
+    "collection": "Sahih al-Bukhari",
+    "number": "5066",
     "category": "marriage",
-    "title": "Marriage and faith",
-    "text": "Marriage is part of the way of the Prophet ﷺ and a means of guarding faith and character.",
-    "reference": "Ibn Majah 1846; meaning summarized"
+    "title": "Guidance for those able to marry",
+    "text": "The Prophet ﷺ encouraged young people who were able to marry, and advised fasting for those who were not able.",
+    "reference": "Bukhari 5066; Muslim 1400"
+  },
+  {
+    "id": "mercy",
+    "collection": "Sahih al-Bukhari",
+    "number": "7376",
+    "category": "character",
+    "title": "Mercy toward people",
+    "text": "Allah will not show mercy to those who do not show mercy to people.",
+    "reference": "Bukhari 7376; Muslim 2319"
+  },
+  {
+    "id": "neighbor",
+    "collection": "Sahih al-Bukhari",
+    "number": "6014",
+    "category": "character",
+    "title": "Care for the neighbor",
+    "text": "Jibril continued to advise the Prophet ﷺ about the neighbor until he thought the neighbor would be given a share of inheritance.",
+    "reference": "Bukhari 6014; Muslim 2624"
+  },
+  {
+    "id": "ease",
+    "collection": "Sahih al-Bukhari",
+    "number": "69",
+    "category": "faith",
+    "title": "Make matters approachable",
+    "text": "Make things easy and do not make them difficult; give glad tidings and do not drive people away.",
+    "reference": "Bukhari 69; Muslim 1734"
+  },
+  {
+    "id": "tongue",
+    "collection": "Sahih al-Bukhari",
+    "number": "6478",
+    "category": "character",
+    "title": "The weight of a word",
+    "text": "A person may speak a word pleasing to Allah without considering its importance, and Allah raises that person because of it.",
+    "reference": "Bukhari 6478; Muslim 2988"
   }
 ]

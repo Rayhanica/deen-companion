@@ -1,0 +1,390 @@
+[
+  {
+    "id": "faith-six-pillars",
+    "topic": "Aqeedah",
+    "level": "Beginner",
+    "title": "The six pillars of iman",
+    "overview": "Iman is belief in Allah, His angels, His books, His messengers, the Last Day, and divine decree. These are not isolated facts; together they shape how a Muslim understands purpose, hardship, worship, and accountability.",
+    "sections": [
+      {
+        "heading": "The framework of belief",
+        "paragraphs": [
+          "The Hadith of Jibril gives a concise framework for Islam, iman, and ihsan. Iman begins with knowledge of what Allah revealed and becomes visible through trust, worship, patience, and moral responsibility.",
+          "Belief in Allah is the foundation. Belief in angels teaches that the unseen creation obeys Allah and that human deeds are recorded. Belief in revelation means Allah did not leave humanity without guidance."
+        ],
+        "bullets": ["Allah alone deserves worship.", "Every messenger called to worship Allah.", "Resurrection gives lasting weight to human choices."]
+      },
+      {
+        "heading": "Divine decree and human responsibility",
+        "paragraphs": [
+          "Muslims believe Allah knows and decrees all things, while people make real choices for which they are responsible. Divine decree is not an excuse for sin or neglect.",
+          "During hardship, this belief prevents despair: what occurred did not escape Allah's knowledge. During ease, it prevents arrogance: ability and opportunity are gifts."
+        ]
+      },
+      {
+        "heading": "A beginner's study method",
+        "paragraphs": [
+          "Learn the pillars from the Quran and authentic Sunnah, then study how each one changes daily life. Avoid beginning with speculative debates or social-media arguments.",
+          "When a theological question is unclear, record it and ask a trustworthy teacher who can explain the evidence and the vocabulary behind it."
+        ]
+      }
+    ],
+    "references": ["Quran 2:285", "Quran 4:136", "Sahih Muslim 8a (Hadith Jibril)"],
+    "related": ["Tawhid", "Knowing Allah", "The Last Day"],
+    "sourceNote": "Summary based on the Quran and the authentic Hadith of Jibril. Detailed creed questions should be studied with a qualified teacher."
+  },
+  {
+    "id": "tawhid-worship",
+    "topic": "Aqeedah",
+    "level": "Beginner",
+    "title": "Tawhid: worshiping Allah alone",
+    "overview": "Tawhid is the central message of every prophet: know Allah as the only Lord and direct every act of worship to Him alone.",
+    "sections": [
+      {
+        "heading": "What worship includes",
+        "paragraphs": [
+          "Worship includes salah, dua, sacrifice, vows, reliance, hope, fear, love, repentance, and obedience when these are acts of devotion. Outward worship should be joined with sincerity of heart.",
+          "A deed is accepted when it is sincerely for Allah and follows the guidance of the Messenger. Good intentions do not make every method correct, and correct actions lose their spiritual value when done for display."
+        ],
+        "bullets": ["Ask Allah directly.", "Rely on Allah while taking lawful means.", "Do not turn religious devotion into a performance for people."]
+      },
+      {
+        "heading": "Allah's names and attributes",
+        "paragraphs": [
+          "The Quran teaches believers to call upon Allah by His beautiful names. Learning these names should produce worship: al-Rahman inspires hope, al-Sami encourages careful speech, and al-Tawwab invites repentance.",
+          "Muslims affirm what Allah revealed about Himself without comparing Him to creation or claiming knowledge that revelation does not provide."
+        ]
+      },
+      {
+        "heading": "Protecting tawhid",
+        "paragraphs": [
+          "Avoid superstition, fortune-telling, charms with unknown content, and claims that people independently control unseen benefit or harm. Respect for righteous people never becomes worship of them.",
+          "The practical protection of tawhid is regular Quran recitation, authentic morning and evening adhkar, sound learning, and sincere dua."
+        ]
+      }
+    ],
+    "references": ["Quran 1:5", "Quran 16:36", "Quran 112:1-4", "Sahih al-Bukhari 1"],
+    "related": ["Dua", "Allah's names", "Sincerity"],
+    "sourceNote": "Introductory overview. Questions involving specific practices or statements should be taken to a qualified scholar."
+  },
+  {
+    "id": "salah-complete-guide",
+    "topic": "Salah",
+    "level": "Beginner",
+    "title": "A practical guide to the five daily prayers",
+    "overview": "Salah structures the Muslim day around remembrance of Allah. Learning it well means understanding its conditions, core actions, recitation, timing, and inner purpose.",
+    "sections": [
+      {
+        "heading": "Before the prayer",
+        "paragraphs": [
+          "Confirm that the prayer time has begun, make the required purification, cover the awrah, face the qibla, and form the intention in the heart. Intention is awareness of which prayer you are performing; it does not require a spoken formula.",
+          "If you are new, prioritize the obligatory prayers and learn al-Fatihah steadily. Do not delay all prayer until every detail is perfect."
+        ],
+        "bullets": ["Pray within its time.", "Use clean clothing and place.", "Remove distractions before the opening takbir."]
+      },
+      {
+        "heading": "The basic flow",
+        "paragraphs": [
+          "A unit of prayer includes standing when able, recitation, bowing, returning upright, two prostrations, and sitting between them. Movements are performed calmly rather than rushed.",
+          "The exact details of hand placement and some phrases differ across recognized schools. Beginners should learn one coherent method from a reliable teacher and avoid turning valid differences into conflict."
+        ]
+      },
+      {
+        "heading": "Building khushu",
+        "paragraphs": [
+          "Khushu grows through preparation, understanding what is recited, slowing down, and remembering that one is standing before Allah. Wandering thoughts do not make prayer worthless; return attention each time.",
+          "Learn the meanings of the opening takbir, al-Fatihah, the bowing and prostration phrases, and the tashahhud. Understanding gives the heart something truthful to attend to."
+        ]
+      },
+      {
+        "heading": "When a prayer is missed",
+        "paragraphs": [
+          "A person who sleeps through a prayer or forgets it should pray when they remember. Repeated missed prayers require addressing the practical cause and seeking qualified guidance for any complex history of neglect.",
+          "Use alarms, sleep planning, congregation, and calendar boundaries at work or school. Consistency is built through systems as well as intention."
+        ]
+      }
+    ],
+    "references": ["Quran 4:103", "Quran 23:1-2", "Sahih al-Bukhari 631", "Sahih Muslim 684"],
+    "related": ["Wudu", "Prayer times", "Khushu"],
+    "sourceNote": "This guide covers agreed foundations and notes where recognized legal detail can differ. Learn the full method with a qualified local teacher."
+  },
+  {
+    "id": "wudu-purification",
+    "topic": "Purification",
+    "level": "Beginner",
+    "title": "Wudu, cleanliness, and certainty",
+    "overview": "Wudu is both practical purification and preparation to stand before Allah. The Quran identifies its core actions, while the Sunnah demonstrates a complete method.",
+    "sections": [
+      {
+        "heading": "A simple complete method",
+        "paragraphs": [
+          "Begin with the intention to purify for worship and mention Allah's name. Wash the hands, rinse the mouth and nose, wash the face, wash the arms through the elbows, wipe the head and ears, and wash the feet through the ankles.",
+          "Washing each limb once fulfills the basic washing when done completely; twice or three times is established in the Sunnah. Wiping the head is done once. Avoid wasting water."
+        ],
+        "bullets": ["Make water reach the whole required limb.", "Remove anything that blocks water.", "Follow the order taught in Quran 5:6."]
+      },
+      {
+        "heading": "What commonly breaks wudu",
+        "paragraphs": [
+          "Clear nullifiers include urination, defecation, passing wind, and loss of consciousness. Other issues have legal detail and may differ between schools.",
+          "Certainty is not removed by doubt. If you are certain you had wudu and only wonder whether it broke, remain on the original certainty unless clear evidence changes it."
+        ]
+      },
+      {
+        "heading": "Common beginner mistakes",
+        "paragraphs": [
+          "Frequently missed areas include the heels, between fingers or toes, the elbows, and the edges of the face. Nail products or substances that form a waterproof barrier need specific attention.",
+          "Obsessive repetition should not be treated as piety. Complete the action carefully, then move on."
+        ]
+      }
+    ],
+    "references": ["Quran 5:6", "Sahih al-Bukhari 159", "Sahih Muslim 226"],
+    "related": ["Ghusl", "Salah", "Certainty and doubt"],
+    "sourceNote": "Details of nullifiers and wiping over footwear vary by legal school and circumstance."
+  },
+  {
+    "id": "fasting-ramadan",
+    "topic": "Fasting",
+    "level": "Beginner",
+    "title": "Fasting Ramadan with understanding",
+    "overview": "Ramadan fasting trains taqwa through lawful restraint, worship, repentance, generosity, and renewed attention to the Quran.",
+    "sections": [
+      {
+        "heading": "The daily fast",
+        "paragraphs": [
+          "The fast runs from true dawn until sunset. A fasting person refrains from food, drink, and marital relations, while also guarding speech and behavior.",
+          "Eat suhoor before dawn when possible and break the fast after sunset without unnecessary delay. Intention belongs in the heart and means knowing that one will fast the required day."
+        ]
+      },
+      {
+        "heading": "The purpose beyond hunger",
+        "paragraphs": [
+          "The Quran names taqwa as the purpose of fasting. Hunger should make obedience easier, not make anger and careless speech acceptable.",
+          "Build the month around the five prayers, Quran, dua, charity, and repairing relationships. A realistic routine followed consistently is better than an unsustainable first week."
+        ],
+        "bullets": ["Protect obligatory worship first.", "Plan Quran by daily pages or minutes.", "Reduce avoidable media and argument."]
+      },
+      {
+        "heading": "Exemptions and make-up fasts",
+        "paragraphs": [
+          "Travel, illness, menstruation, pregnancy, nursing, age, and chronic conditions involve rules that depend on the situation. The Quran explicitly gives concessions for illness and travel.",
+          "Medical and personal cases should be discussed with both a qualified clinician and a qualified scholar when needed. Do not give vulnerable people rulings from a generic checklist."
+        ]
+      }
+    ],
+    "references": ["Quran 2:183-187", "Sahih al-Bukhari 1903", "Sahih Muslim 1099"],
+    "related": ["Ramadan planner", "Quran goals", "Make-up fasts"],
+    "sourceNote": "General worship guidance only. Health exemptions, pregnancy, chronic illness, and expiation require case-specific advice."
+  },
+  {
+    "id": "zakah-foundations",
+    "topic": "Zakah",
+    "level": "Beginner",
+    "title": "Zakah: purifying wealth responsibly",
+    "overview": "Zakah is an obligation tied to eligible wealth, minimum thresholds, ownership periods, and defined recipients. Accurate calculation requires more than applying one percentage to everything.",
+    "sections": [
+      {
+        "heading": "What zakah does",
+        "paragraphs": [
+          "Zakah is worship, purification of wealth, and a protected right for eligible recipients. It is not simply optional charity.",
+          "The Quran names eight recipient categories in Quran 9:60. Personal preference does not override those categories."
+        ]
+      },
+      {
+        "heading": "What needs calculation",
+        "paragraphs": [
+          "Cash, savings, trade inventory, gold and silver, investments, business assets, agricultural produce, and livestock do not all share identical rules. Debts and retirement accounts also require careful treatment.",
+          "Nisab is a minimum threshold linked to gold or silver valuation, and many assets require ownership for a lunar year. Scholars differ on some modern applications."
+        ],
+        "bullets": ["Choose a consistent annual review date.", "List each asset and liability separately.", "Document the method and scholar or calculator used."]
+      },
+      {
+        "heading": "A responsible workflow",
+        "paragraphs": [
+          "Gather statements and valuations, identify which assets are zakatable, confirm the nisab approach, and ask a zakah specialist about complex holdings.",
+          "Keep voluntary sadaqah separate in your records. Both are valuable, but one should not accidentally replace an unpaid obligation."
+        ]
+      }
+    ],
+    "references": ["Quran 9:60", "Quran 2:267", "Sahih al-Bukhari 1395"],
+    "related": ["Charity", "Islamic finance", "Ramadan"],
+    "sourceNote": "Do not use this overview as a calculator. Business, investment, debt, and retirement cases require a qualified zakah specialist."
+  },
+  {
+    "id": "tawbah-repentance",
+    "topic": "Spiritual growth",
+    "level": "All levels",
+    "title": "Tawbah: returning to Allah",
+    "overview": "Repentance is not reserved for a spiritual crisis. It is a regular act of worship built on honesty, hope, and practical change.",
+    "sections": [
+      {
+        "heading": "The conditions of sincere repentance",
+        "paragraphs": [
+          "Sincere tawbah includes leaving the sin, regretting it, and resolving not to return. If another person's rights were taken or harmed, those rights must be restored or forgiveness sought in a wise manner.",
+          "Repentance must occur before death reaches a person. Repeating a sin does not close the door permanently; return again sincerely and strengthen the safeguards around the weakness."
+        ],
+        "bullets": ["Stop the wrongdoing.", "Ask Allah for forgiveness.", "Repair rights and damage.", "Replace the pattern with a lawful habit."]
+      },
+      {
+        "heading": "Hope without complacency",
+        "paragraphs": [
+          "Quran 39:53 forbids despair of Allah's mercy, while the following ayahs call people to turn back and submit. Hope produces movement; it is not permission to plan continued disobedience.",
+          "Shame that leads to humility can be beneficial. Shame that says a person is too corrupt to return is a trap."
+        ]
+      },
+      {
+        "heading": "Changing the environment",
+        "paragraphs": [
+          "Remove access, triggers, contacts, or routines that repeatedly lead to the sin. Seek good companionship and professional help when addiction, abuse, or mental health is involved.",
+          "Keep the sin private unless disclosure is needed to restore someone's right or receive appropriate help. Do not turn repentance into public storytelling."
+        ]
+      }
+    ],
+    "references": ["Quran 39:53-54", "Quran 66:8", "Sahih Muslim 2747"],
+    "related": ["Istighfar", "Hope", "Habit change"],
+    "sourceNote": "Serious harm, abuse, addiction, crime, or another person's rights may require professional, legal, and scholarly support."
+  },
+  {
+    "id": "character-speech",
+    "topic": "Character",
+    "level": "All levels",
+    "title": "Guarding speech and building good character",
+    "overview": "Islamic character is faith expressed in ordinary interactions. Truthfulness, patience, mercy, modesty, and reliability are forms of worship.",
+    "sections": [
+      {
+        "heading": "Speech has consequences",
+        "paragraphs": [
+          "The Quran commands believers to speak words that are straight and sound. It prohibits mockery, insulting labels, suspicion, spying, and backbiting because these destroy trust.",
+          "Online speech remains accountable speech. Forwarding a claim without verification can spread injustice even when the sender did not create it."
+        ],
+        "bullets": ["Verify before sharing.", "Do not expose private faults.", "Correct without humiliation.", "Apologize and repair when words cause harm."]
+      },
+      {
+        "heading": "Strength and self-control",
+        "paragraphs": [
+          "The Prophet taught that strength includes controlling oneself during anger. This does not mean ignoring injustice; it means choosing a response instead of being controlled by impulse.",
+          "Pause, seek refuge in Allah, change posture, make wudu, and delay a message or decision until the emotional surge passes."
+        ]
+      },
+      {
+        "heading": "A character review",
+        "paragraphs": [
+          "Choose one trait for a week and measure it in specific situations. 'Be more patient' is vague; 'do not interrupt and wait before replying when frustrated' is measurable.",
+          "Ask a trusted person where your conduct causes difficulty. Private self-accounting is more useful than collecting inspirational reminders without change."
+        ]
+      }
+    ],
+    "references": ["Quran 33:70", "Quran 49:11-12", "Sahih al-Bukhari 6114", "Sahih Muslim 47"],
+    "related": ["Anger", "Backbiting", "Family ties"],
+    "sourceNote": "Ethical overview based on clear Quranic commands and authentic hadith."
+  },
+  {
+    "id": "family-parents",
+    "topic": "Family",
+    "level": "All levels",
+    "title": "Parents, family ties, and healthy boundaries",
+    "overview": "Islam joins strong duties toward parents and relatives with justice, wisdom, and obedience to Allah. Kindness does not mean participating in wrongdoing.",
+    "sections": [
+      {
+        "heading": "Kindness to parents",
+        "paragraphs": [
+          "The Quran repeatedly places excellent treatment of parents immediately after worship of Allah. This includes respectful speech, service, gratitude, dua, and care in old age.",
+          "Even when parents are not Muslim or pressure a child toward disobedience, the Quran commands good companionship while refusing the wrong action."
+        ]
+      },
+      {
+        "heading": "Maintaining family ties",
+        "paragraphs": [
+          "Maintaining ties can include visits, calls, financial help, conflict repair, gifts, and checking on vulnerable relatives. The appropriate form depends on distance, need, safety, and custom.",
+          "A person should not answer harm with unnecessary cruelty. At the same time, abuse, coercion, and danger require protection and qualified support."
+        ],
+        "bullets": ["Speak respectfully.", "Set clear limits without insults.", "Use mediators when helpful.", "Seek safety in abusive situations."]
+      },
+      {
+        "heading": "When duties compete",
+        "paragraphs": [
+          "Marriage, children, parents, work, and health can create competing claims. Good intentions alone may not settle whose right is most urgent.",
+          "Map the obligations, distinguish needs from preferences, communicate early, and consult knowledgeable people for persistent conflict."
+        ]
+      }
+    ],
+    "references": ["Quran 17:23-24", "Quran 31:14-15", "Sahih al-Bukhari 5971"],
+    "related": ["Marriage", "Conflict", "Caregiving"],
+    "sourceNote": "Abuse and safety concerns need qualified local support. Generic advice should not be used to keep someone in danger."
+  },
+  {
+    "id": "seerah-roadmap",
+    "topic": "Seerah",
+    "level": "Beginner",
+    "title": "A roadmap through the life of Prophet Muhammad ﷺ",
+    "overview": "Seerah shows revelation lived in real conditions: family life, persecution, migration, community building, conflict, mercy, worship, and leadership.",
+    "sections": [
+      {
+        "heading": "The Makkan period",
+        "paragraphs": [
+          "The early message centered on worshiping Allah alone, resurrection, justice, care for the vulnerable, and purification of character. The first Muslims faced mockery, pressure, boycott, and violence.",
+          "This period teaches that strong communities begin with clear belief and formed character, not only institutions."
+        ],
+        "bullets": ["First revelation", "Private and public call", "Persecution and Abyssinia", "Boycott and Year of Sorrow", "Pledges of Aqabah"]
+      },
+      {
+        "heading": "Hijrah and Madinah",
+        "paragraphs": [
+          "The Hijrah combined complete reliance on Allah with detailed planning. In Madinah, the Prophet established the masjid, bonds of brotherhood, public agreements, worship, charity, and community responsibility.",
+          "The Madinan years also included military threats and treaties. Events should be studied chronologically and with their causes, agreements, and Quranic commentary."
+        ]
+      },
+      {
+        "heading": "Victory and final years",
+        "paragraphs": [
+          "The opening of Makkah displayed restraint and mercy after years of persecution. The Farewell Pilgrimage summarized major duties, the sanctity of life and property, and responsibility before Allah.",
+          "The Prophet's death reminds Muslims that the Messenger is followed and loved, while worship belongs to Allah who does not die."
+        ]
+      },
+      {
+        "heading": "How to study seerah",
+        "paragraphs": [
+          "Use a reliable chronological work, keep a timeline, connect major events to related Quran passages, and distinguish well-established reports from popular stories with weak sourcing.",
+          "Ask four questions in each event: what happened, what revelation addressed it, what character did the Prophet show, and what principle applies today?"
+        ]
+      }
+    ],
+    "references": ["Quran 33:21", "Quran 9:40", "Quran 48:1", "Sahih al-Bukhari, Book of Military Expeditions"],
+    "related": ["Makkan period", "Hijrah", "Madinan community"],
+    "sourceNote": "Introductory chronology. Historical reports vary in strength; detailed study should note source grading."
+  },
+  {
+    "id": "death-hereafter",
+    "topic": "Hereafter",
+    "level": "All levels",
+    "title": "Death, accountability, and preparing well",
+    "overview": "Remembering death is meant to clarify life, not produce paralysis. The Quran connects certainty of death with repentance, responsibility, and hope in Allah.",
+    "sections": [
+      {
+        "heading": "What remembrance changes",
+        "paragraphs": [
+          "Every soul will taste death, and every person returns to Allah. This makes time, rights, debts, worship, and relationships urgent without making worldly responsibilities meaningless.",
+          "Islam does not teach seeking death because of hardship. A believer asks Allah for life when life is better and death when death is better."
+        ]
+      },
+      {
+        "heading": "Practical preparation",
+        "paragraphs": [
+          "Keep debts and trusts documented, maintain a valid will where needed, restore people's rights, learn the funeral obligations, and teach family essential account information without exposing sensitive data carelessly.",
+          "The most important preparation remains faith, obligatory worship, repentance, and consistent good deeds."
+        ],
+        "bullets": ["Resolve debts.", "Repair relationships.", "Keep beneficiary and legal documents current.", "Build ongoing charity and beneficial knowledge."]
+      },
+      {
+        "heading": "Grief and hope",
+        "paragraphs": [
+          "Grief is not a failure of faith. The Prophet wept at loss while speaking words pleasing to Allah. Patience means remaining within Allah's guidance while the heart hurts.",
+          "Support grieving people with presence, food, practical help, dua, and patience. Avoid confident claims about an individual's unseen final state."
+        ]
+      }
+    ],
+    "references": ["Quran 3:185", "Quran 59:18", "Sahih al-Bukhari 5671", "Sahih Muslim 920"],
+    "related": ["Grief", "Wills and debts", "Repentance"],
+    "sourceNote": "Legal wills, inheritance, end-of-life decisions, and funeral cases require qualified local advice."
+  }
+]

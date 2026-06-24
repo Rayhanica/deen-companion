@@ -1,5 +1,6 @@
 -- Deen Companion Supabase schema
 -- Run this in the Supabase SQL editor after creating a project.
+-- Then apply supabase/migrations/202606240001_ecosystem_foundation.sql.
 
 create extension if not exists "pgcrypto";
 

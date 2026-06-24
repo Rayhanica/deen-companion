@@ -1,12 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import {
   Bookmark,
   BookOpen,
   BookOpenText,
   CheckCircle2,
+  ExternalLink,
   Heart,
+  Lightbulb,
   ListMusic,
   Pause,
   Play,
@@ -19,6 +22,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PageHeader } from "@/components/ui/page-header";
 import { ProgressBar } from "@/components/ui/progress";
+import { ReferenceLinks } from "@/components/ui/reference-links";
 import { EmptyState, LoadingState } from "@/components/ui/state";
 import { tajweedData } from "@/lib/content";
 import type { QuranPassage, QuranTafsir } from "@/lib/types";
@@ -123,6 +127,11 @@ export function QuranReader() {
     return `${surah}:${ayah}`;
   }
 
+  function quranComUrl(key: string) {
+    const [surah, ayah] = key.split(":");
+    return `https://quran.com/${surah}?startingVerse=${ayah}`;
+  }
+
   function playAyah(audioUrl: string | undefined, key: string, repeats = 1) {
     if (!audioUrl) return;
     if (audioRef.current && activeAudioKey === key && !audioRef.current.paused) {
@@ -151,15 +160,6 @@ export function QuranReader() {
     void audio.play();
   }
 
-  function studyPrompt(translation: string) {
-    const clean = translation.replace(/\[[^\]]+\]/g, "").trim();
-    return [
-      `Core meaning: ${clean}`,
-      "Study lens: read this ayah with the surrounding passage before drawing conclusions.",
-      "Action step: write one dua, habit, or character change connected to this ayah."
-    ];
-  }
-
   async function toggleTafsir(key: string) {
     const willOpen = !expandedTafsir[key];
     setExpandedTafsir((current) => ({ ...current, [key]: willOpen }));
@@ -176,14 +176,19 @@ export function QuranReader() {
         ...current,
         [key]: {
           ayahKey: key,
-          source: "Deen Companion study notes",
-          text: "Tafsir could not be loaded right now. Use a reliable tafsir source and ask a qualified teacher for sensitive meanings or rulings.",
+          source: "Deen Companion contextual study guide",
+          text: "Read this ayah with the surrounding passage and identify its central teaching. A recognized tafsir should be consulted for transmitted explanations, legal details, and points where translations differ.",
+          context: "The external tafsir source could not be reached. This study framework remains available offline.",
+          themes: ["Read in context", "Connect meaning with action", "Ask qualified teachers"],
+          application: "Record one question and one responsible action connected to the ayah.",
           reflection: [
             "Read the ayah with the ayah before and after it.",
             "Identify what the ayah teaches about Allah, worship, character, or the Hereafter.",
             "Avoid deriving rulings from a translation alone."
           ],
-          references: ["For personal learning. Ask a qualified scholar for specific rulings."]
+          references: ["For personal learning. Ask a qualified scholar for specific rulings."],
+          sourceUrl: quranComUrl(key),
+          kind: "study-guide"
         }
       }));
     } finally {
@@ -283,9 +288,35 @@ export function QuranReader() {
                 <ProgressBar value={percentage(memorizedInPassage, passage.ayahs.length)} className="mt-3" />
               </div>
             ) : null}
+
+            <div className="mt-5 border-t border-slate-100 pt-4 dark:border-white/10 xl:hidden">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-sm font-medium text-ink dark:text-white">Ayah repeat</span>
+                <div className="flex gap-1">
+                  {[1, 3, 5].map((count) => (
+                    <button
+                      key={count}
+                      type="button"
+                      onClick={() => setRepeatCount(count)}
+                      className={cn(
+                        "h-8 min-w-10 rounded-md border px-2 text-xs font-medium",
+                        repeatCount === count
+                          ? "border-reed bg-reed text-white"
+                          : "border-slate-200 text-slate-600 dark:border-white/10 dark:text-slate-300"
+                      )}
+                    >
+                      {count}x
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <Link href="/learn" className="mt-4 inline-flex text-sm font-medium text-reed dark:text-teal-200">
+                Open Arabic and tajweed curriculum
+              </Link>
+            </div>
           </Card>
 
-          <Card>
+          <Card className="hidden xl:block">
             <CardHeader>
               <div>
                 <CardTitle>Repeat audio</CardTitle>
@@ -312,7 +343,7 @@ export function QuranReader() {
             </div>
           </Card>
 
-          <Card>
+          <Card className="hidden xl:block">
             <CardHeader>
               <div>
                 <CardTitle>Tajweed starter</CardTitle>
@@ -430,7 +461,7 @@ export function QuranReader() {
                         ) : null}
                       </div>
 
-                      <div className="rounded-lg border border-reed/15 bg-skysoft/45 p-3 dark:border-teal-200/15 dark:bg-white/8">
+                      <div className="rounded-lg border border-reed/15 bg-[#f3f7f4] p-4 dark:border-teal-200/15 dark:bg-white/[0.045]">
                         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                           <div>
                             <p className="flex items-center gap-2 text-sm font-semibold text-ink dark:text-white">
@@ -438,7 +469,7 @@ export function QuranReader() {
                               Tafsir and deeper explanation
                             </p>
                             <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
-                              Quran.com tafsir when available, with study reflections.
+                              Classical tafsir when configured, with a sourced contextual guide for every ayah.
                             </p>
                           </div>
                           <Button variant="secondary" size="sm" onClick={() => toggleTafsir(key)}>
@@ -448,38 +479,76 @@ export function QuranReader() {
 
                         {expandedTafsir[key] ? (
                           <div className="mt-4 space-y-4">
-                            <div className="rounded-lg bg-white/75 p-3 dark:bg-slate-950/60">
-                              <p className="text-sm font-semibold text-reed dark:text-teal-200">Quick study prompts</p>
-                              <ul className="mt-2 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-200">
-                                {studyPrompt(ayah.translation).map((prompt) => (
-                                  <li key={prompt}>{prompt}</li>
-                                ))}
-                              </ul>
-                            </div>
-
                             {loadingTafsirKey === key ? (
                               <p className="text-sm text-slate-600 dark:text-slate-300">Loading tafsir...</p>
                             ) : tafsirByKey[key] ? (
-                              <div className="space-y-3">
+                              <div className="space-y-4">
                                 <div>
-                                  <p className="text-sm font-semibold text-ink dark:text-white">{tafsirByKey[key].source}</p>
+                                  <div className="flex flex-wrap items-center justify-between gap-2">
+                                    <div className="flex flex-wrap items-center gap-2">
+                                      <p className="text-sm font-semibold text-ink dark:text-white">{tafsirByKey[key].source}</p>
+                                      <Badge>
+                                        {tafsirByKey[key].kind === "classical-tafsir" ? "Classical tafsir" : "Study guide"}
+                                      </Badge>
+                                    </div>
+                                    {tafsirByKey[key].sourceUrl ? (
+                                      <a
+                                        href={tafsirByKey[key].sourceUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center gap-1 text-xs font-medium text-reed hover:underline dark:text-teal-200"
+                                      >
+                                        Read source
+                                        <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                                      </a>
+                                    ) : null}
+                                  </div>
                                   <p className="mt-2 whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-200">
                                     {tafsirByKey[key].text}
                                   </p>
                                 </div>
-                                <div className="rounded-lg bg-white/75 p-3 dark:bg-slate-950/60">
-                                  <p className="text-sm font-semibold text-ink dark:text-white">Reflection</p>
-                                  <ul className="mt-2 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-200">
-                                    {tafsirByKey[key].reflection.map((item) => (
-                                      <li key={item}>{item}</li>
-                                    ))}
-                                  </ul>
+
+                                {tafsirByKey[key].context ? (
+                                  <div className="border-l-2 border-reed/30 pl-4">
+                                    <p className="text-xs font-semibold uppercase text-reed dark:text-teal-200">Surah context</p>
+                                    <p className="mt-2 text-sm leading-7 text-slate-700 dark:text-slate-200">
+                                      {tafsirByKey[key].context}
+                                    </p>
+                                  </div>
+                                ) : null}
+
+                                <div className="grid gap-3 lg:grid-cols-2">
+                                  {tafsirByKey[key].themes?.length ? (
+                                    <div className="rounded-lg bg-white p-4 dark:bg-slate-950/50">
+                                      <p className="text-sm font-semibold text-ink dark:text-white">Themes in this passage</p>
+                                      <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-700 dark:text-slate-200">
+                                        {tafsirByKey[key].themes?.map((item) => (
+                                          <li key={item} className="flex gap-2">
+                                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-reed dark:bg-teal-200" />
+                                            {item}
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ) : null}
+                                  <div className="rounded-lg bg-white p-4 dark:bg-slate-950/50">
+                                    <p className="flex items-center gap-2 text-sm font-semibold text-ink dark:text-white">
+                                      <Lightbulb className="h-4 w-4 text-saffron" aria-hidden="true" />
+                                      Practice and reflection
+                                    </p>
+                                    {tafsirByKey[key].application ? (
+                                      <p className="mt-3 text-sm leading-6 text-slate-700 dark:text-slate-200">
+                                        {tafsirByKey[key].application}
+                                      </p>
+                                    ) : null}
+                                    <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                                      {tafsirByKey[key].reflection.map((item) => (
+                                        <li key={item}>{item}</li>
+                                      ))}
+                                    </ul>
+                                  </div>
                                 </div>
-                                <div className="flex flex-wrap gap-2">
-                                  {tafsirByKey[key].references.map((reference) => (
-                                    <Badge key={reference}>{reference}</Badge>
-                                  ))}
-                                </div>
+                                <ReferenceLinks references={tafsirByKey[key].references} className="sm:grid-cols-2" compact />
                               </div>
                             ) : null}
                           </div>

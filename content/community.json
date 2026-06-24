@@ -1,0 +1,69 @@
+[
+  {
+    "id": "community-jummah",
+    "type": "event",
+    "title": "Friday Community Lunch",
+    "organization": "Local Masjid Network",
+    "location": "Nearby masjids",
+    "schedule": "Friday after Jumu'ah",
+    "description": "A welcoming lunch for families, students, travelers, and new Muslims.",
+    "tags": ["family", "new muslim", "jummah"],
+    "verified": true,
+    "href": "/find"
+  },
+  {
+    "id": "community-quran-circle",
+    "type": "circle",
+    "title": "Weekly Quran Reflection Circle",
+    "organization": "Deen Companion Study Circles",
+    "location": "Online",
+    "schedule": "Sunday, 7:00 PM",
+    "description": "Read a short passage, review reliable tafsir, and leave with one action point.",
+    "tags": ["quran", "tafsir", "adults"],
+    "verified": true
+  },
+  {
+    "id": "community-tajweed",
+    "type": "class",
+    "title": "Beginner Tajweed Clinic",
+    "organization": "Quran Learning Collective",
+    "location": "Online",
+    "schedule": "Tuesday, 8:00 PM",
+    "description": "Small-group correction focused on makharij, qalqalah, ghunnah, and short-surah fluency.",
+    "tags": ["tajweed", "arabic", "beginner"],
+    "verified": true
+  },
+  {
+    "id": "community-food-bank",
+    "type": "volunteer",
+    "title": "Weekend Food Pantry Volunteers",
+    "organization": "Muslim Service Network",
+    "location": "Local area",
+    "schedule": "Saturday morning",
+    "description": "Pack and distribute food. Family-friendly roles are available.",
+    "tags": ["charity", "family", "service"],
+    "verified": false
+  },
+  {
+    "id": "community-convert-mentor",
+    "type": "teacher",
+    "title": "New Muslim Mentor",
+    "organization": "New Muslim Support Team",
+    "location": "Online and local",
+    "schedule": "By appointment",
+    "description": "Foundations support, prayer practice, community navigation, and referral to qualified teachers.",
+    "tags": ["new muslim", "mentor", "salah"],
+    "verified": true
+  },
+  {
+    "id": "community-family-class",
+    "type": "class",
+    "title": "Faith-Centered Parenting",
+    "organization": "Family Learning Hub",
+    "location": "Online",
+    "schedule": "Monthly",
+    "description": "Age-appropriate worship, family routines, digital boundaries, and compassionate discipline.",
+    "tags": ["parenting", "family", "youth"],
+    "verified": true
+  }
+]

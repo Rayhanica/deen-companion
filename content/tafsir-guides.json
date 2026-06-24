@@ -1,0 +1,181 @@
+{
+  "surahs": [
+    {
+      "number": 1,
+      "name": "Al-Fatihah",
+      "context": "Al-Fatihah is the opening of the Quran and the central recitation of every unit of salah. It moves from praise and recognition of Allah, to worship and dependence, and then to a direct request for guidance.",
+      "themes": ["Knowing Allah through His names", "Worship and reliance", "Guidance to the straight path"],
+      "references": ["Quran 1:1-7", "Sahih Muslim 395"]
+    },
+    {
+      "number": 2,
+      "name": "Al-Baqarah",
+      "context": "Al-Baqarah develops the foundations of a faithful community: belief, worship, moral responsibility, family life, financial ethics, law, patience, and lessons from earlier nations.",
+      "themes": ["Guidance and taqwa", "Covenant and obedience", "Building a worshipful community"],
+      "references": ["Quran 2", "Sahih Muslim 804"]
+    },
+    {
+      "number": 12,
+      "name": "Yusuf",
+      "context": "Surah Yusuf presents one connected account of trial, chastity, patience, leadership, forgiveness, and Allah's subtle planning across many years.",
+      "themes": ["Beautiful patience", "Protection from temptation", "Forgiveness after gaining power"],
+      "references": ["Quran 12:1-111"]
+    },
+    {
+      "number": 18,
+      "name": "Al-Kahf",
+      "context": "Al-Kahf teaches how faith is protected through four major tests: religion, wealth, knowledge, and power. Its stories train believers to see beyond immediate appearances.",
+      "themes": ["Steadfast faith", "The temporary nature of worldly life", "Humility before Allah's knowledge"],
+      "references": ["Quran 18:1-110", "Sahih Muslim 809"]
+    },
+    {
+      "number": 36,
+      "name": "Ya-Sin",
+      "context": "Ya-Sin calls attention to revelation, the signs of Allah in creation, resurrection, accountability, and the contrast between those who receive guidance and those who reject it.",
+      "themes": ["Truth of revelation", "Signs in creation", "Resurrection and accountability"],
+      "references": ["Quran 36:1-83"]
+    },
+    {
+      "number": 49,
+      "name": "Al-Hujurat",
+      "context": "Al-Hujurat teaches the manners that protect a believing community: respect for revelation, verification of news, reconciliation, avoiding mockery and suspicion, and honoring people through taqwa.",
+      "themes": ["Community ethics", "Responsible speech", "Human dignity and taqwa"],
+      "references": ["Quran 49:1-18"]
+    },
+    {
+      "number": 55,
+      "name": "Ar-Rahman",
+      "context": "Ar-Rahman repeatedly directs human beings and jinn to recognize Allah's favors in revelation, creation, justice, provision, and the Hereafter.",
+      "themes": ["Allah's mercy", "Gratitude for blessings", "Balance and justice"],
+      "references": ["Quran 55:1-78"]
+    },
+    {
+      "number": 67,
+      "name": "Al-Mulk",
+      "context": "Al-Mulk establishes Allah's complete sovereignty, invites reflection on the precision of creation, and warns that life is a test whose results appear in the Hereafter.",
+      "themes": ["Allah's dominion", "Life as a test", "Reflection on creation"],
+      "references": ["Quran 67:1-30", "Tirmidhi 2891"]
+    },
+    {
+      "number": 93,
+      "name": "Ad-Duha",
+      "context": "Ad-Duha consoles the Prophet during a pause in revelation, recalls Allah's past care, and turns gratitude into care for the orphan, the questioner, and the vulnerable.",
+      "themes": ["Allah has not abandoned His servant", "Remembering past care", "Gratitude through service"],
+      "references": ["Quran 93:1-11"]
+    },
+    {
+      "number": 103,
+      "name": "Al-Asr",
+      "context": "Al-Asr gives a concise map of salvation: faith, righteous action, mutual encouragement to truth, and mutual encouragement to patience.",
+      "themes": ["The value of time", "Faith expressed through action", "Truth and patience in community"],
+      "references": ["Quran 103:1-3"]
+    },
+    {
+      "number": 112,
+      "name": "Al-Ikhlas",
+      "context": "Al-Ikhlas gives a concentrated declaration of tawhid. Allah is uniquely One, eternally depended upon, and entirely unlike creation.",
+      "themes": ["Pure monotheism", "Allah's absolute perfection", "Rejecting comparisons between Allah and creation"],
+      "references": ["Quran 112:1-4", "Sahih al-Bukhari 5013"]
+    },
+    {
+      "number": 113,
+      "name": "Al-Falaq",
+      "context": "Al-Falaq teaches believers to seek Allah's protection from outward harms: created evil, darkness, harmful occult practices, and envy.",
+      "themes": ["Seeking refuge in Allah", "Awareness without superstition", "Protection from envy and harm"],
+      "references": ["Quran 113:1-5", "Sahih Muslim 814"]
+    },
+    {
+      "number": 114,
+      "name": "An-Nas",
+      "context": "An-Nas teaches believers to seek Allah's protection from inward spiritual harm, especially recurring whispers that target the heart.",
+      "themes": ["Allah as Lord, King, and God", "Protection of the heart", "Recognizing harmful whispers"],
+      "references": ["Quran 114:1-6", "Sahih Muslim 814"]
+    }
+  ],
+  "ayahs": {
+    "1:1": {
+      "summary": "The Quran opens by teaching the believer to begin in Allah's name. The names al-Rahman and al-Rahim place expansive and continuing mercy at the beginning of recitation, worship, and action.",
+      "application": "Begin beneficial work consciously in Allah's name and ask that it be sincere and blessed."
+    },
+    "1:2": {
+      "summary": "All complete praise belongs to Allah, the Lord who creates, owns, sustains, and nurtures every world. Praise here includes love, gratitude, and recognition of perfection.",
+      "application": "Name specific blessings and connect them to the One who sustains them."
+    },
+    "1:3": {
+      "summary": "The repetition of Allah's mercy prevents a believer's understanding of lordship from becoming cold or merely theoretical. His care is joined with mercy.",
+      "application": "Let hope in Allah's mercy produce repentance and better conduct, not carelessness."
+    },
+    "1:4": {
+      "summary": "Allah alone possesses complete authority on the Day of Judgment. The ayah corrects false security and reminds every person that choices have a final accounting.",
+      "application": "Review one unresolved duty or wrong and take a concrete step to repair it."
+    },
+    "1:5": {
+      "summary": "Worship is directed to Allah alone, while help is ultimately sought from Him alone. The order joins commitment with dependence: believers act, but do not rely on themselves.",
+      "application": "Pair an act of worship with a sincere dua for Allah's help in completing it well."
+    },
+    "1:6": {
+      "summary": "Guidance is not requested once; it is needed continuously. The straight path includes correct knowledge, sincere intention, and steady action.",
+      "application": "Ask for guidance before a decision, then seek sound knowledge and consult trustworthy people."
+    },
+    "1:7": {
+      "summary": "The path is known through those Allah favored, while two failures are avoided: knowing truth but refusing it, and acting without reliable guidance.",
+      "application": "Identify whether your current challenge needs more knowledge, more willingness to act, or both."
+    },
+    "2:255": {
+      "summary": "Ayat al-Kursi gathers major truths about Allah: perfect life, complete sustaining power, freedom from weakness, total ownership, unrestricted knowledge, and supreme authority.",
+      "application": "Recite it with understanding after obligatory prayers and before sleep, as established in authentic reports."
+    },
+    "2:286": {
+      "summary": "The surah closes with responsibility joined to mercy. People are accountable within their capacity and are taught to ask for pardon, forgiveness, mercy, and divine help.",
+      "application": "Distinguish genuine inability from avoidable neglect, then ask Allah for help with the next manageable step."
+    },
+    "39:53": {
+      "summary": "This call is addressed to people who have greatly wronged themselves, yet it forbids despair. Allah's forgiveness is vast for those who return sincerely before death.",
+      "application": "Do not delay tawbah: stop the sin, regret it, resolve not to return, and restore people's rights."
+    },
+    "49:13": {
+      "summary": "Human diversity is a sign for recognition and cooperation, not racial or tribal superiority. The Quran places true honor in taqwa, which Allah knows fully.",
+      "application": "Challenge one prejudice or dismissive habit and replace it with just, respectful conduct."
+    },
+    "93:3": {
+      "summary": "A period of silence or difficulty is not proof of abandonment. The ayah directly consoles the Prophet and teaches believers not to interpret every delay as rejection.",
+      "application": "Recall evidence of Allah's past care while continuing the duties in front of you."
+    },
+    "103:1": {
+      "summary": "Allah swears by time, the container of every human choice. What passes cannot be recovered, so time is both a blessing and evidence against waste.",
+      "application": "Protect a small daily block for worship, family duty, and beneficial learning."
+    },
+    "103:2": {
+      "summary": "Human beings naturally lose their limited capital of life unless it is converted into what endures. Mere activity is not the same as success.",
+      "application": "Audit one routine by asking whether it serves faith, responsibility, or real benefit."
+    },
+    "103:3": {
+      "summary": "Salvation is described through four connected qualities: faith, righteous deeds, shared commitment to truth, and shared commitment to patience. Islam is lived personally and supported communally.",
+      "application": "Choose one good action and one person with whom you can encourage consistency."
+    },
+    "112:1": {
+      "summary": "Allah is uniquely and indivisibly One in His lordship, worship, names, and attributes. Nothing shares His divinity.",
+      "application": "Direct dua, reliance, fear, hope, and worship to Allah alone."
+    },
+    "112:2": {
+      "summary": "Al-Samad means the One perfect in His attributes and depended upon by all creation, while He depends on none.",
+      "application": "Take needs first to Allah while still using lawful practical means."
+    },
+    "112:3": {
+      "summary": "Allah is above biological lineage and created dependence. He neither produces offspring nor originated through parentage.",
+      "application": "Reject ideas that describe Allah through the limitations of created beings."
+    },
+    "112:4": {
+      "summary": "No being is comparable to Allah in essence, attributes, authority, or right to worship.",
+      "application": "Affirm what Allah revealed about Himself without imagining Him as creation."
+    },
+    "113:1": {
+      "summary": "The believer is taught to actively seek protection with the Lord who brings the dawn, turning fear toward dependence on Allah.",
+      "application": "Use the established morning and evening recitations with attention, not as empty habit."
+    },
+    "114:1": {
+      "summary": "Protection is sought with the Lord of humanity, the One who creates, nurtures, and controls every circumstance.",
+      "application": "When troubled by recurring thoughts, seek refuge in Allah and redirect attention toward what is true and useful."
+    }
+  }
+}

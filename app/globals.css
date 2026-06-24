@@ -4,29 +4,75 @@
 
 :root {
   color-scheme: light;
-  background: #f8faf7;
+  background: #f5f7f5;
+  --surface: #ffffff;
+  --surface-muted: #f0f4f1;
+  --line: #dfe7e2;
+  --text: #16231f;
+  --text-muted: #64716c;
 }
 
 .dark {
   color-scheme: dark;
-  background: #101820;
+  background: #101714;
+  --surface: #17201c;
+  --surface-muted: #1d2924;
+  --line: #2b3933;
+  --text: #f4f7f5;
+  --text-muted: #9eaaa5;
 }
 
 html {
   scroll-behavior: smooth;
+  background: #f5f7f5;
 }
 
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(217, 237, 242, 0.55) 0%, rgba(248, 250, 247, 0.88) 36%, #f8faf7 100%);
-  color: #1f2933;
+  overflow-x: hidden;
+  background: #f5f7f5;
+  color: var(--text);
+  font-family: var(--font-inter, "Inter"), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 .dark body {
-  background:
-    linear-gradient(180deg, rgba(15, 118, 110, 0.2) 0%, rgba(16, 24, 32, 0.96) 34%, #101820 100%);
-  color: #f3f6f2;
+  background: #101714;
+  color: var(--text);
+}
+
+.dark html {
+  background: #101714;
+}
+
+main {
+  width: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+.accessibility body {
+  font-size: 18px;
+}
+
+.accessibility button,
+.accessibility a,
+.accessibility input,
+.accessibility select {
+  min-height: 44px;
+}
+
+.accessibility .text-xs {
+  font-size: 0.875rem;
+}
+
+.accessibility .text-sm {
+  font-size: 1rem;
 }
 
 button,
@@ -38,8 +84,48 @@ textarea {
 
 .arabic-text {
   direction: rtl;
-  line-height: 2.2;
-  font-family: "Amiri", "Scheherazade New", "Times New Roman", serif;
+  line-height: 2.15;
+  font-family: var(--font-amiri, "Amiri"), "Noto Naskh Arabic", "Scheherazade New", "Times New Roman", serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+::selection {
+  background: rgba(47, 93, 80, 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid #2f5d50;
+  outline-offset: 2px;
+}
+
+.dark :focus-visible {
+  outline-color: #7cc4ae;
+}
+
+.content-prose p + p {
+  margin-top: 0.9rem;
+}
+
+.content-prose ul {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.content-prose li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.content-prose li::before {
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 999px;
+  background: #2f5d50;
+  content: "";
 }
 
 .no-scrollbar::-webkit-scrollbar {

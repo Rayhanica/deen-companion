@@ -2,6 +2,7 @@
 
 ## Quran
 - **Primary MVP API:** Al Quran Cloud REST API for Quran text, translation, transliteration, surah/juz navigation, and recitation audio.
+- **Source search:** Al Quran Cloud full-Quran search exposes 6,236 translated ayah records through the app source index.
 - **Production upgrade:** Quran Foundation/Quran.com Content APIs and JavaScript SDK for typed clients, richer content APIs, search, and user APIs when credentials are approved.
 
 ## Prayer times, Qibla, Islamic calendar
@@ -17,3 +18,5 @@
 
 ## Accuracy policy
 All Islamic learning content should remain sourced and reviewed. The app includes the disclaimer: “For personal learning. Ask a qualified scholar for specific rulings.”
+
+References in Learn, Hadith, and Quran explanation views are resolved to direct Quran.com or Sunnah.com links where a specific ayah or hadith number is available. General book references link to an appropriate library or source-search page and should be tightened during editorial review.

@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Deen Companion",
+    "slug": "deen-companion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/brand/icon.png",
+    "scheme": "deencompanion",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/brand/icon.png"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#004b43",
+        "foregroundImage": "./assets/brand/icon.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/brand/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#175C4C",
+          "image": "./assets/brand/splash.png",
+          "imageWidth": 180,
+          "android": {
+            "image": "./assets/brand/splash.png",
+            "imageWidth": 180
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

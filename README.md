@@ -8,9 +8,14 @@ Deen Companion is a modern all-in-one Islamic web app MVP for Quran learning, pr
 - Prayer tools with city search, device-location timings, next-prayer countdown, qibla direction, browser reminders, monthly calendar, calculation method, and Asr school settings.
 - Hadith library with collections roadmap, category search, bookmarks, and daily hadith.
 - Duas and dhikr with categories, Arabic/transliteration/translation, favorites, daily dua prompt, and tasbih counters.
-- Learn section with searchable beginner-friendly knowledge articles, Arabic/Quran lessons, tajweed rules, fatwa literacy, Islamic history, seerah, Prophets’ stories, and source references.
+- Learn section with detailed study guides, Arabic/Quran lessons, tajweed rules, fatwa literacy, Islamic history, seerah, Prophets’ stories, numbered linked footnotes, and a source library.
+- Source explorer covering all 6,236 Quran ayahs through full-Quran search, reviewed app content, linked hadith references, recent searches, and a curated external directory.
+- Intent-based navigation with Home, Quran, Learn, Community, and Profile.
+- Global search across public knowledge plus private guest notes.
+- Structured learning paths, local family profiles, personal knowledge vault, recommendation API, and community hub.
+- Scalable relational migration for Quran words/roots, hadith, tafsir, courses, scholar review, fatwa comparison, hifz, community, AI history, and offline synchronization.
 - Quran tafsir and deeper per-ayah study prompts, backed by Quran.com tafsir resources when available.
-- AI learning companion with local fallback and optional OpenAI Responses API/web search support.
+- AI learning companion with explicit capability status, reviewed local retrieval, source research without a paid key, and optional OpenAI Responses API/web search with clickable citations.
 - Masjid and halal restaurant finder using OpenStreetMap/Nominatim/Overpass data with attribution.
 - Home dashboard with next prayer, daily ayah, daily hadith, daily dua, today’s deeds, fasting tracker, streak signal, and progress.
 - Profile with guest mode, Supabase sign in/sign up, cloud sync status, preferences, goals, and progress.
@@ -44,7 +49,8 @@ Deen Companion is a modern all-in-one Islamic web app MVP for Quran learning, pr
    - Create a Supabase project.
    - Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` to `.env.local`.
    - Run `supabase/schema.sql` in the Supabase SQL editor.
-   - Optional: run `supabase/seed.sql`.
+   - Run `supabase/migrations/202606240001_ecosystem_foundation.sql`.
+   - Optional: run `supabase/seed.sql` and `supabase/seed_ecosystem.sql`.
 
 4. Start the app:
 
@@ -69,17 +75,20 @@ OPENAI_MODEL=gpt-5.5
 
 `HADITH_API_KEY` is reserved for a future server-side Hadith API integration. Do not expose private API keys with `NEXT_PUBLIC_`.
 
+Without `OPENAI_API_KEY`, the guide still searches reviewed app content and all 6,236 translated Quran ayahs. Add the key to enable GPT-5.5 generation and hosted live web search.
+
 ## Data and sources
 
 - Quran: Al Quran Cloud REST API for Arabic text, translations, transliteration, audio, surah, and juz data.
 - Prayer times: AlAdhan API for timings, monthly calendar, calculation settings, school parameter, Hijri date, and qibla.
 - Quran production upgrade: Quran Foundation/Quran.com APIs and SDK when API access is approved.
-- Hadith MVP: curated local seed data with references. Expand with a reviewed provider/API on the server.
+- Hadith MVP: curated local seed data with direct Sunnah.com reference links. Expand with a reviewed provider/API on the server.
 - Knowledge and duas: structured JSON content with references and editorial review.
-- AI companion: optional OpenAI Responses API. Web browsing uses the hosted web search tool when enabled and configured.
+- AI companion: reviewed local/source-search fallback plus optional OpenAI Responses API. Web browsing uses the hosted `web_search` tool when enabled and configured.
 - Nearby finder: OpenStreetMap, Nominatim, and Overpass. Display attribution and verify halal status directly.
 
 See `docs/API_SOURCES.md` for source notes.
+See `docs/ECOSYSTEM_ARCHITECTURE.md`, `docs/CONTENT_INGESTION.md`, and `docs/ECOSYSTEM_ROADMAP.md` for the platform architecture and delivery plan.
 
 ## Project structure
 
@@ -155,7 +164,7 @@ Run:
 
 3. **Mobile and notifications**
    - Add PWA install prompts and service-worker push notifications.
-   - Wrap with Expo/Capacitor if native app store distribution is needed.
+   - Complete the Expo native client under `apps/mobile`, including SQLite packs, push notifications, widgets, and app-store builds.
 
 4. **SaaS expansion**
    - Add subscriptions, organizations, teacher dashboards, family plans, and analytics.

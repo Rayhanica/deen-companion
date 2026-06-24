@@ -1,4 +1,5 @@
-import type { QuranAyah, QuranPassage } from "@/lib/types";
+import tafsirGuides from "@/content/tafsir-guides.json";
+import type { QuranAyah, QuranPassage, QuranTafsir } from "@/lib/types";
 
 type AlQuranEdition = {
   identifier: string;
@@ -28,7 +29,7 @@ type AlQuranData = {
 };
 
 const API_BASE = "https://api.alquran.cloud/v1";
-const QURAN_COM_API_BASE = "https://api.quran.com/api/v4";
+const QURAN_FOUNDATION_API_BASE = "https://apis.quran.foundation/content/api/v4";
 const EDITIONS = ["quran-uthmani", "en.sahih", "en.transliteration", "ar.alafasy"];
 
 async function fetchAlQuran(path: string) {
@@ -115,48 +116,117 @@ function stripHtml(value: string) {
     .trim();
 }
 
-function fallbackReflection(ayahKey: string) {
+type TafsirGuideData = {
+  surahs: Array<{
+    number: number;
+    name: string;
+    context: string;
+    themes: string[];
+    references: string[];
+  }>;
+  ayahs: Record<string, { summary: string; application: string }>;
+};
+
+const localTafsir = tafsirGuides as TafsirGuideData;
+
+function quranComAyahUrl(ayahKey: string, tafsir = false) {
+  const [surah, ayah] = ayahKey.split(":");
+  const base = `https://quran.com/${surah}?startingVerse=${ayah}`;
+  return tafsir ? `${base}&translations=131&tafsirs=169` : base;
+}
+
+async function getAyahTranslation(ayahKey: string) {
+  try {
+    const editions = await fetchAlQuran(`/ayah/${encodeURIComponent(ayahKey)}/editions/en.sahih`);
+    const ayah = editions[0]?.ayahs?.[0] ?? (editions[0] as unknown as AlQuranAyah | undefined);
+    return ayah?.text?.trim() ?? "";
+  } catch {
+    return "";
+  }
+}
+
+async function fallbackReflection(ayahKey: string): Promise<QuranTafsir> {
+  const surahNumber = Number(ayahKey.split(":")[0]);
+  const guide = localTafsir.surahs.find((item) => item.number === surahNumber);
+  const ayahGuide = localTafsir.ayahs[ayahKey];
+  const translation = await getAyahTranslation(ayahKey);
+  const text =
+    ayahGuide?.summary ??
+    (translation
+      ? `This ayah communicates the following meaning in the selected English translation: ${translation} Read it as part of the argument and guidance of the surrounding passage, rather than as an isolated sentence.`
+      : "Read this ayah with the surrounding passage, compare a reliable translation, and consult a recognized tafsir for its transmitted explanations and legal implications.");
+
   return {
     ayahKey,
-    source: "Deen Companion study notes",
-    text:
-      "A detailed tafsir service response was not available. Use the Arabic, translation, surrounding ayahs, and reliable tafsir sources to study the meaning. Avoid deriving personal legal rulings from a translation alone.",
+    source: ayahGuide ? "Deen Companion curated verse guide" : "Deen Companion contextual study guide",
+    text,
+    context:
+      guide?.context ??
+      "This guide provides reading context, not an independent legal or theological interpretation. The ayah should be studied with its surrounding verses and a recognized tafsir.",
+    themes: guide?.themes ?? ["Read in context", "Connect belief with action", "Consult recognized tafsir"],
+    application:
+      ayahGuide?.application ??
+      "Write the central instruction, promise, warning, or description in your own words, then identify one responsible action it supports.",
     reflection: [
-      "Read the ayah with the ayah before and after it.",
-      "Identify what the ayah teaches about Allah, worship, character, or the Hereafter.",
-      "Ask a qualified teacher for legal, theological, or sensitive interpretation questions."
+      "What does the ayah teach about Allah, guidance, human responsibility, or the Hereafter?",
+      "How do the ayahs immediately before and after it shape the meaning?",
+      "What question should be taken to a qualified teacher rather than answered from translation alone?"
     ],
-    references: ["Quran.com tafsir resource", "For personal learning. Ask a qualified scholar for specific rulings."]
+    references: [...(guide?.references ?? []), "Quran Foundation: Tafsir Ibn Kathir resource 169"],
+    sourceUrl: quranComAyahUrl(ayahKey),
+    kind: "study-guide"
   };
 }
 
 export async function getAyahTafsir(ayahKey: string, tafsirId = "169") {
-  const response = await fetch(`${QURAN_COM_API_BASE}/quran/tafsirs/${tafsirId}/by_ayah/${encodeURIComponent(ayahKey)}`, {
-    next: { revalidate: 60 * 60 * 24 * 7 }
-  });
+  const clientId = process.env.QURAN_FOUNDATION_CLIENT_ID;
+  const accessToken = process.env.QURAN_FOUNDATION_ACCESS_TOKEN;
 
-  if (!response.ok) return fallbackReflection(ayahKey);
+  if (!clientId || !accessToken) return fallbackReflection(ayahKey);
 
-  const payload = (await response.json()) as {
-    tafsir?: {
-      id?: number;
-      resource_name?: string;
-      text?: string;
+  try {
+    const response = await fetch(
+      `${QURAN_FOUNDATION_API_BASE}/tafsirs/${tafsirId}/by_ayah/${encodeURIComponent(ayahKey)}?fields=resource_name,verse_key`,
+      {
+        headers: {
+          "x-auth-token": accessToken,
+          "x-client-id": clientId
+        },
+        next: { revalidate: 60 * 60 * 24 * 7 }
+      }
+    );
+
+    if (!response.ok) return fallbackReflection(ayahKey);
+
+    const payload = (await response.json()) as {
+      tafsirs?: Array<{
+        id?: number;
+        resource_name?: string;
+        text?: string;
+        verse_key?: string;
+      }>;
     };
-  };
+    const record = payload.tafsirs?.[0];
+    const text = stripHtml(record?.text ?? "");
+    if (!text) return fallbackReflection(ayahKey);
 
-  const text = stripHtml(payload.tafsir?.text ?? "");
-  if (!text) return fallbackReflection(ayahKey);
-
-  return {
-    ayahKey,
-    source: payload.tafsir?.resource_name ?? "Quran.com tafsir",
-    text,
-    reflection: [
-      "Read tafsir as explanation, not as a replacement for the Quran itself.",
-      "Compare the theme with the ayah translation and surrounding passage.",
-      "Turn the meaning into one practical action or dua."
-    ],
-    references: [`Quran.com tafsir resource ${payload.tafsir?.id ?? tafsirId}`, "Ibn Kathir (Abridged) when available"]
-  };
+    return {
+      ayahKey,
+      source: record?.resource_name ?? "Tafsir Ibn Kathir",
+      text,
+      context: localTafsir.surahs.find((item) => item.number === Number(ayahKey.split(":")[0]))?.context,
+      themes: localTafsir.surahs.find((item) => item.number === Number(ayahKey.split(":")[0]))?.themes,
+      application: localTafsir.ayahs[ayahKey]?.application,
+      reflection: [
+        "Which transmitted explanation clarifies the translation?",
+        "How does the explanation connect this ayah to the surrounding passage?",
+        "What belief, worship, or character response follows from the meaning?"
+      ],
+      references: [`Quran Foundation content resource ${tafsirId}`, "Tafsir Ibn Kathir"],
+      sourceUrl: quranComAyahUrl(ayahKey, true),
+      kind: "classical-tafsir"
+    };
+  } catch {
+    return fallbackReflection(ayahKey);
+  }
 }

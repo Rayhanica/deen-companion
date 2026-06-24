@@ -2,6 +2,8 @@
 .env
 .env*.local
 .next
+.next-build
+.next-dev
 node_modules
 .npm-cache
 npm-debug.log*

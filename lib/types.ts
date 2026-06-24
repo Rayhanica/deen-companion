@@ -35,6 +35,24 @@ export type KnowledgeArticle = {
   disclaimer: string;
 };
 
+export type StudyGuideSection = {
+  heading: string;
+  paragraphs: string[];
+  bullets?: string[];
+};
+
+export type StudyGuide = {
+  id: string;
+  topic: string;
+  level: "Beginner" | "Intermediate" | "All levels";
+  title: string;
+  overview: string;
+  sections: StudyGuideSection[];
+  references: string[];
+  related: string[];
+  sourceNote: string;
+};
+
 export type DeepLearningLesson = {
   id: string;
   track: string;
@@ -96,6 +114,68 @@ export type ContentSource = {
   name: string;
   url: string;
   usage: string;
+  category?: string;
+  authority?: "Primary" | "Reference" | "Learning";
+};
+
+export type SourceSearchResult = {
+  id: string;
+  type:
+    | "quran"
+    | "tafsir"
+    | "hadith"
+    | "lesson"
+    | "course"
+    | "article"
+    | "fatwa"
+    | "history"
+    | "dua"
+    | "glossary"
+    | "note"
+    | "bookmark"
+    | "directory"
+    | "community";
+  title: string;
+  excerpt: string;
+  reference: string;
+  url: string;
+  provider: string;
+};
+
+export type LearningPath = {
+  id: string;
+  title: string;
+  audience: string;
+  description: string;
+  level: "Beginner" | "Intermediate" | "Advanced" | "All levels";
+  durationWeeks: number;
+  lessonCount: number;
+  outcomes: string[];
+  modules: Array<{
+    title: string;
+    lessons: string[];
+  }>;
+};
+
+export type CommunityItem = {
+  id: string;
+  type: "event" | "class" | "volunteer" | "circle" | "teacher" | "announcement";
+  title: string;
+  organization: string;
+  location: string;
+  schedule: string;
+  description: string;
+  tags: string[];
+  verified: boolean;
+  href?: string;
+};
+
+export type RecommendationItem = {
+  id: string;
+  type: "ayah" | "hadith" | "dua" | "course" | "article" | "review";
+  title: string;
+  reason: string;
+  href: string;
 };
 
 export type QuranAyah = {
@@ -118,6 +198,11 @@ export type QuranTafsir = {
   text: string;
   reflection: string[];
   references: string[];
+  context?: string;
+  themes?: string[];
+  application?: string;
+  sourceUrl?: string;
+  kind?: "classical-tafsir" | "study-guide";
 };
 
 export type QuranPassage = {
@@ -156,7 +241,7 @@ export type CalculationMethod = {
 };
 
 export type UserPreferences = {
-  language: "en";
+  language: "en" | "ar" | "ha" | "ur" | "fr" | "tr" | "id" | "bn";
   translation: string;
   calculationMethod: number;
   school: 0 | 1;
@@ -165,6 +250,9 @@ export type UserPreferences = {
   country: string;
   theme: "light" | "dark";
   dailyQuranMinutes: number;
+  journeyStage?: "new-muslim" | "growing" | "practicing" | "student" | "teacher";
+  accessibilityMode?: boolean;
+  interests?: string[];
 };
 
 export type UserGoal = {
@@ -181,11 +269,33 @@ export type UserAppState = {
   ayahFavorites: string[];
   ayahNotes: Record<string, string>;
   memorizedAyahs: string[];
+  memorizationReviews?: Record<string, string>;
+  memorizationMistakes?: Record<string, number>;
   completedDeeds: Record<string, string[]>;
   duaFavorites: string[];
   hadithBookmarks: string[];
   tasbihCounts: Record<string, number>;
   fastingDays: string[];
+  recentSearches?: string[];
+  completedLessons?: string[];
+  enrolledPaths?: string[];
+  personalVault?: Array<{
+    id: string;
+    title: string;
+    body: string;
+    sourceType?: string;
+    sourceKey?: string;
+    tags: string[];
+    updatedAt: string;
+  }>;
+  familyMembers?: Array<{
+    id: string;
+    name: string;
+    role: "parent" | "guardian" | "child" | "member";
+    quranTarget: number;
+    salahTarget: number;
+    completedAssignments: string[];
+  }>;
   goals: UserGoal[];
   preferences: UserPreferences;
 };

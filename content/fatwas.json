@@ -30,5 +30,37 @@
     "answer": "Zakah on cash savings usually applies when a Muslim owns zakatable wealth above the nisab for one lunar year. Exact calculations depend on assets, debts, business inventory, gold, and local valuation.",
     "references": ["Quran 9:60", "Classical zakah chapters"],
     "disclaimer": "General learning only. Ask a qualified scholar or zakah specialist for calculation."
+  },
+  {
+    "id": "fatwa-travel-prayer",
+    "topic": "Salah",
+    "question": "When can a traveler shorten or combine prayers?",
+    "answer": "The Quran and Sunnah establish concessions for travel, including shortening four-unit prayers. The distance, duration, intention of stay, and combining details are treated differently across recognized schools. Learn one coherent method before travel and ask a scholar when the itinerary is complex.",
+    "references": ["Quran 4:101", "Sahih Muslim 686"],
+    "disclaimer": "General learning only. Travel details and legal-school methods differ."
+  },
+  {
+    "id": "fatwa-medication-fasting",
+    "topic": "Fasting",
+    "question": "What should I do if I need medication while fasting?",
+    "answer": "Islam gives concessions for illness. Whether a medication breaks the fast can depend on how it is administered, and whether fasting is medically safe depends on the condition. Speak with a qualified clinician and a qualified scholar before changing essential treatment.",
+    "references": ["Quran 2:184-185"],
+    "disclaimer": "Do not stop or delay prescribed medication based on generic app content."
+  },
+  {
+    "id": "fatwa-interest-contract",
+    "topic": "Finance",
+    "question": "How should I review a loan or financing contract?",
+    "answer": "Do not decide from the product label alone. Review the actual contract, fees, late-payment terms, ownership structure, guarantees, and cash flows. Riba and modern financing require document-level analysis by someone qualified in both Islamic law and the relevant financial system.",
+    "references": ["Quran 2:275-279", "Sahih Muslim 1598"],
+    "disclaimer": "General learning only. Have the exact contract reviewed by a qualified Islamic finance scholar."
+  },
+  {
+    "id": "fatwa-online-content",
+    "topic": "Knowledge",
+    "question": "Can I follow a fatwa from a short video or social post?",
+    "answer": "A short answer may omit the questioner's circumstances, evidence, legal school, exceptions, and local context. Check who issued it, whether the full answer is available, and whether your case actually matches. Personal matters such as divorce, inheritance, finance, and medical treatment need direct qualified advice.",
+    "references": ["Quran 16:43", "Quran 17:36"],
+    "disclaimer": "Use online rulings for orientation, not as a substitute for case-specific scholarship."
   }
 ]

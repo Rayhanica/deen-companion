@@ -52,5 +52,59 @@
     "summary": "The Prophet ﷺ built brotherhood, worship, social responsibility, and public order in Madinah.",
     "lessons": ["Masjids are centers of worship and community.", "Brotherhood requires action.", "Justice and mercy guide public life."],
     "references": ["Quran 33:21", "Seerah summaries"]
+  },
+  {
+    "id": "yusuf",
+    "category": "Stories of the Prophets",
+    "title": "Yusuf عليه السلام: integrity through changing circumstances",
+    "period": "Patriarchal Prophets",
+    "summary": "Yusuf faced betrayal, enslavement, temptation, false accusation, prison, authority, and family reunion. The same faith guided him when he had little power and when he held public responsibility.",
+    "lessons": ["Chastity may require leaving a dangerous setting.", "Patience includes excellent conduct while waiting.", "Power creates an opportunity for forgiveness."],
+    "references": ["Quran 12:1-111"]
+  },
+  {
+    "id": "maryam",
+    "category": "Quranic Stories",
+    "title": "Maryam عليها السلام: devotion, trial, and honor",
+    "period": "Before the ministry of Isa عليه السلام",
+    "summary": "Maryam is honored for worship, purity, truthfulness, and trust during an extraordinary trial. Her story is told with dignity and is tied to the miraculous birth of Isa.",
+    "lessons": ["Private worship builds strength for public trials.", "Allah's power is not limited by ordinary causes.", "Believers should protect people's honor from reckless accusation."],
+    "references": ["Quran 3:35-47", "Quran 19:16-36", "Quran 66:12"]
+  },
+  {
+    "id": "hudaybiyyah",
+    "category": "Seerah",
+    "title": "The Treaty of Hudaybiyyah",
+    "period": "6 AH / 628 CE",
+    "summary": "A treaty that appeared unfavorable became a clear opening. The event teaches disciplined leadership, respect for agreements, patience with difficult terms, and trust in revelation.",
+    "lessons": ["Immediate appearances do not reveal every outcome.", "Peace can create space for truth to spread.", "Leadership sometimes absorbs public frustration while protecting long-term benefit."],
+    "references": ["Quran 48:1-29", "Sahih al-Bukhari, Book of Conditions"]
+  },
+  {
+    "id": "makkah-opening",
+    "category": "Seerah",
+    "title": "The opening of Makkah",
+    "period": "8 AH / 630 CE",
+    "summary": "The Prophet ﷺ returned to Makkah with strength after years of persecution. The event joined the removal of idolatry with broad restraint and mercy toward former enemies.",
+    "lessons": ["Victory should produce humility, not revenge.", "Mercy can be strongest when punishment is possible.", "Tawhid remained the purpose of the mission."],
+    "references": ["Quran 110:1-3", "Sahih al-Bukhari, Book of Military Expeditions"]
+  },
+  {
+    "id": "abu-bakr-caliphate",
+    "category": "Islamic History",
+    "title": "Abu Bakr and leadership after loss",
+    "period": "11-13 AH / 632-634 CE",
+    "summary": "After the Prophet's death, Abu Bakr helped steady the community, defended the obligations of Islam, and oversaw the first organized collection of the Quranic text into a single manuscript collection.",
+    "lessons": ["Sound leadership combines tenderness with firmness.", "Communities need principles during emotional shock.", "Preserving knowledge requires organized action."],
+    "references": ["Quran 3:144", "Sahih al-Bukhari 4986"]
+  },
+  {
+    "id": "umar-jerusalem",
+    "category": "Islamic History",
+    "title": "Umar ibn al-Khattab and public accountability",
+    "period": "13-23 AH / 634-644 CE",
+    "summary": "Umar's caliphate is remembered for administrative development, personal austerity, consultation, and close concern for public responsibility across a rapidly expanding state.",
+    "lessons": ["Authority increases accountability.", "Institutions need records, consultation, and oversight.", "Personal simplicity can protect public trust."],
+    "references": ["Sahih al-Bukhari, virtues of Umar", "Early Islamic historical chronicles; reports vary in grading"]
   }
 ]

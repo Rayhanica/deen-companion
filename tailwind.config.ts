@@ -20,11 +20,11 @@ const config: Config = {
         skysoft: "#d9edf2",
       },
       boxShadow: {
-        soft: "0 12px 34px rgba(31, 41, 51, 0.08)",
+        soft: "0 8px 24px rgba(22, 35, 31, 0.055)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "Inter", "ui-sans-serif", "system-ui"],
-        arabic: ["var(--font-amiri)", "Amiri", "serif"],
+        sans: ["var(--font-inter, 'Inter')", "ui-sans-serif", "system-ui"],
+        arabic: ["var(--font-amiri, 'Amiri')", "serif"],
       },
     },
   },

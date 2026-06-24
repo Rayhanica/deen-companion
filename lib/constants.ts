@@ -19,11 +19,18 @@ export const DEFAULT_USER_STATE: UserAppState = {
   ayahFavorites: [],
   ayahNotes: {},
   memorizedAyahs: [],
+  memorizationReviews: {},
+  memorizationMistakes: {},
   completedDeeds: {},
   duaFavorites: [],
   hadithBookmarks: [],
   tasbihCounts: {},
   fastingDays: [],
+  recentSearches: [],
+  completedLessons: [],
+  enrolledPaths: [],
+  personalVault: [],
+  familyMembers: [],
   goals: [
     { id: "quran", title: "Quran", category: "quran", target: 10, current: 0 },
     { id: "salah", title: "Salah on time", category: "salah", target: 5, current: 0 },
@@ -39,7 +46,10 @@ export const DEFAULT_USER_STATE: UserAppState = {
     city: "New York",
     country: "United States",
     theme: "light",
-    dailyQuranMinutes: 10
+    dailyQuranMinutes: 10,
+    journeyStage: "growing",
+    accessibilityMode: false,
+    interests: ["Quran", "Salah", "Character"]
   }
 };
 

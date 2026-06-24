@@ -1,0 +1,134 @@
+[
+  {
+    "id": "reading-joined-letters",
+    "track": "Arabic and Quran Reading",
+    "level": "Beginner",
+    "title": "Joined letters and non-connecting letters",
+    "summary": "Arabic letters change shape inside words. Six common letters connect to the letter before them but not to the letter after them: ا د ذ ر ز و.",
+    "objectives": ["Recognize beginning, middle, and final forms.", "Identify the six non-connecting letters.", "Read short joined words without naming each letter."],
+    "reading": ["The shape may change, but the identity and articulation of a letter stay connected to its base form.", "Break a difficult word into letter groups, sound each group, then blend the whole word.", "Do not use transliteration as the main reading method; it cannot represent every Quranic sound accurately."],
+    "practice": "Separate and rejoin: كَتَبَ، رَزَقَ، وَجَدَ، عَبَدَ. Circle every non-connecting letter.",
+    "references": ["Traditional Quran literacy primers"]
+  },
+  {
+    "id": "reading-tanween-shaddah",
+    "track": "Arabic and Quran Reading",
+    "level": "Beginner",
+    "title": "Tanween and shaddah",
+    "summary": "Tanween adds an ending n-sound, while shaddah doubles a consonant. Both are essential for accurate word shape and rhythm.",
+    "objectives": ["Read fathatayn, kasratayn, and dammatayn.", "Hold the first half of a doubled consonant correctly.", "Recognize ghunnah when noon or meem carries shaddah."],
+    "reading": ["Tanween is written as two vowel marks and is heard as an added n-sound when continuing.", "A letter with shaddah represents two letters: the first has sukoon and the second carries the written vowel.", "Do not turn every shaddah into a long vowel; the consonant itself is doubled."],
+    "practice": "Read slowly: عَلِيمٌ، عَلِيمًا، عَلِيمٍ، إِنَّ، ثُمَّ، رَبِّ.",
+    "references": ["Traditional Quran literacy primers", "Juz Amma examples"]
+  },
+  {
+    "id": "reading-long-vowels",
+    "track": "Arabic and Quran Reading",
+    "level": "Beginner",
+    "title": "Long vowels and basic madd",
+    "summary": "Alif, waw, and ya can lengthen the matching short vowel. Natural madd is normally held for two counts.",
+    "objectives": ["Match fathah with alif, dammah with waw, and kasrah with ya.", "Distinguish a short vowel from a two-count vowel.", "Keep the count steady without singing extra length."],
+    "reading": ["A madd letter is sakin and preceded by its matching vowel: قَا, قُو, قِي.", "Counting should be even. Use two finger taps or a teacher's model until the duration becomes natural.", "Later lessons cover cases where hamzah or sukoon changes the length."],
+    "practice": "Compare: قَلَ / قَالَ، قُلْ / قُولُوا، بِ / فِي.",
+    "references": ["Classical tajweed primers", "Quran 73:4"]
+  },
+  {
+    "id": "reading-hamzat-wasl",
+    "track": "Arabic and Quran Reading",
+    "level": "Intermediate",
+    "title": "Hamzat al-wasl and starting words",
+    "summary": "Hamzat al-wasl is pronounced when beginning a word but usually drops when the word is connected to what comes before it.",
+    "objectives": ["Recognize the small ص mark over connecting hamzah in the mushaf.", "Start common words with the correct vowel.", "Avoid inserting an extra stop before every word."],
+    "reading": ["The definite article ال begins with hamzat al-wasl. When connected, the previous sound flows directly into the lam or the assimilated sun letter.", "Starting verbs with hamzat al-wasl requires rules for choosing the opening vowel. Beginners should learn frequent Quran words by model before memorizing all morphology.", "Smooth connected reading depends on this rule."],
+    "practice": "Compare beginning and connecting: الْحَمْدُ / لِلْحَمْدِ, اهْدِنَا / وَاهْدِنَا.",
+    "references": ["Classical tajweed primers", "Mushaf orthography"]
+  },
+  {
+    "id": "tajweed-heavy-light",
+    "track": "Tajweed Rules",
+    "level": "Beginner",
+    "title": "Heavy and light letters",
+    "summary": "Seven letters are consistently heavy: خ ص ض غ ط ق ظ. Ra and the lam in Allah's name have additional context-dependent rules.",
+    "objectives": ["Memorize the seven heavy letters.", "Avoid rounding every heavy sound into the same vowel.", "Recognize basic heavy and light cases for ra and the word Allah."],
+    "reading": ["Heaviness raises the back of the tongue and gives the sound fullness. It should not distort the vowel.", "The lam in Allah's name is heavy after fathah or dammah and light after kasrah.", "Ra requires a dedicated lesson because its ruling depends on vowels, sukoon, and neighboring letters."],
+    "practice": "Compare س/ص, د/ض, ت/ط, ك/ق. Then read بِسْمِ اللَّهِ and قَالَ اللَّهُ.",
+    "references": ["Classical tajweed primers"]
+  },
+  {
+    "id": "tajweed-lam-ra",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "Lam shamsiyyah, lam qamariyyah, and ra",
+    "summary": "The definite article is either pronounced clearly before moon letters or assimilated into sun letters. Ra may be heavy or light depending on its vowels and context.",
+    "objectives": ["Recognize the fourteen sun letters.", "Read moon-letter lam clearly.", "Apply common heavy and light ra cases."],
+    "reading": ["In الشَّمْس, the lam is not pronounced and the sun letter carries shaddah. In الْقَمَر, the lam is clear.", "Ra is generally heavy with fathah or dammah and light with kasrah, though sakin cases require looking at surrounding vowels.", "Learn exceptions with a teacher rather than forcing one shortcut onto every word."],
+    "practice": "Read: الشَّمْس، النَّاس، الْقَمَر، الْفَلَق، رَبِّ، رِزْق.",
+    "references": ["Classical tajweed primers", "Surahs ash-Shams, al-Falaq, an-Nas"]
+  },
+  {
+    "id": "tajweed-qalqalah-complete",
+    "track": "Tajweed Rules",
+    "level": "Beginner",
+    "title": "Qalqalah without adding a vowel",
+    "summary": "Qalqalah is a controlled rebound on ق ط ب ج د when the letter is sakin. It is clearer when stopping but must not become a new vowel.",
+    "objectives": ["Memorize قطب جد.", "Distinguish a small rebound from an added fathah.", "Hear the stronger qalqalah at a stop."],
+    "reading": ["The sound is produced by releasing a closed articulation point. Do not add 'a', 'i', or 'u' after the letter.", "Qalqalah in the middle of a word is lighter. When stopping makes the letter sakin at the end, the rebound is more noticeable.", "Shaddah at a stop can make it stronger because the consonant is doubled."],
+    "practice": "Record and compare: يَجْعَلْ، يَقْطَعُ، أَحَدْ، الْفَلَقْ، وَتَبّ.",
+    "references": ["Classical tajweed primers", "Juz Amma examples"]
+  },
+  {
+    "id": "tajweed-noon-four-rules",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "The four rules of noon sakinah and tanween",
+    "summary": "Noon sakinah and tanween are read with idhar, idgham, iqlab, or ikhfa depending on the next letter.",
+    "objectives": ["Sort the following letter into one of four rules.", "Use ghunnah where required.", "Find examples in short surahs."],
+    "reading": ["Idhar is clear before ء ه ع ح غ خ. Idgham merges before يرملون, with ghunnah for ي ن م و and without it for ل ر.", "Iqlab changes the noon sound toward a hidden meem before ب. Ikhfa applies before the remaining fifteen letters with a concealed nasal sound.", "The mouth prepares for the next letter while the ghunnah remains in the nasal passage."],
+    "practice": "Classify: مِنْ هَادٍ، مَنْ يَقُولُ، سَمِيعٌ بَصِيرٌ، مِنْ شَرِّ.",
+    "references": ["Classical tajweed primers", "Quran 2 and Juz Amma examples"]
+  },
+  {
+    "id": "tajweed-meem-three-rules",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "The three rules of meem sakinah",
+    "summary": "Meem sakinah is hidden before ba, merged before meem, and pronounced clearly before all other letters.",
+    "objectives": ["Apply ikhfa shafawi before ب.", "Apply idgham shafawi before م.", "Keep meem clear before other letters, especially ف and و."],
+    "reading": ["Both lips meet lightly for meem. In ikhfa shafawi, avoid a hard closure too early and keep two counts of ghunnah.", "In idgham shafawi, the two meems merge and the resulting meem with shaddah carries ghunnah.", "Idhar shafawi is clear, but care is needed before fa and waw because their articulation is close to the lips."],
+    "practice": "Read: تَرْمِيهِمْ بِحِجَارَةٍ، لَكُمْ مَا، عَلَيْهِمْ وَلَا.",
+    "references": ["Classical tajweed primers", "Surah al-Fil"]
+  },
+  {
+    "id": "tajweed-madd-types",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "Madd caused by hamzah or sukoon",
+    "summary": "After natural madd, students learn why some vowels are held longer: a following hamzah, a permanent sukoon, or a stop that creates temporary sukoon.",
+    "objectives": ["Separate natural madd from secondary madd.", "Recognize connected and separated hamzah cases.", "Apply the recitation length taught by a qualified teacher consistently."],
+    "reading": ["Madd muttasil occurs when the madd letter and hamzah are in the same word. Madd munfasil occurs across two words.", "Madd lazim involves a permanent sukoon and is held six counts in the common Hafs recitation. Madd arid occurs when stopping creates temporary sukoon.", "Count conventions depend on the recitation method. Consistency and teacher correction matter more than learning isolated labels."],
+    "practice": "Mark the cause of lengthening in: جَاءَ، فِي أَنْفُسِكُمْ، الضَّالِّينَ، الْعَالَمِينْ when stopping.",
+    "references": ["Classical tajweed primers", "Hafs an Asim recitation rules"]
+  },
+  {
+    "id": "tajweed-waqf-ibtida",
+    "track": "Tajweed Rules",
+    "level": "Intermediate",
+    "title": "Waqf and ibtida: stopping and restarting",
+    "summary": "Good stopping protects meaning and breath. Good restarting ensures the resumed phrase remains grammatically and theologically sound.",
+    "objectives": ["Recognize common mushaf stop symbols.", "Avoid stopping where a phrase becomes misleading.", "Restart from enough context to restore complete meaning."],
+    "reading": ["A م sign indicates a necessary stop; لا warns against stopping; ج permits either; and paired dots indicate stopping at one of the two places, not both.", "Breath need may force an unplanned stop. When that happens, restart from an earlier phrase that restores the connection.", "Do not assume every end-of-line is an end-of-meaning."],
+    "practice": "Use a color pencil to mark safe stops in al-Fatihah and the last ten surahs, then compare with a teacher's recitation.",
+    "references": ["Mushaf stopping signs", "Classical waqf and ibtida manuals"]
+  },
+  {
+    "id": "quran-practice-plan",
+    "track": "Study Method",
+    "level": "Beginner",
+    "title": "A 20-minute daily Quran learning routine",
+    "summary": "A short, repeatable routine can combine pronunciation, reading, listening, meaning, and memorization without overwhelming a beginner.",
+    "objectives": ["Use a fixed daily sequence.", "Track one pronunciation focus at a time.", "Review before adding new material."],
+    "reading": ["Spend five minutes on letters or one tajweed rule, five minutes reading while looking at the mushaf, five minutes listening and repeating, and five minutes reviewing meaning.", "For memorization, repeat one ayah while looking, then without looking, then connect it to the previous ayah. Review old material more than new material.", "Record one session each week and compare it with a reliable reciter or teacher. Self-listening reveals mistakes that are hard to notice while reading."],
+    "practice": "Choose a consistent time, one short surah, and one measurable target for the next seven days.",
+    "references": ["Quran 73:4", "Quran 20:114", "Established hifz review practice"]
+  }
+]
